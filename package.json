@@ -1,0 +1,23 @@
+{
+  "name": "raheq-data",
+  "version": "1.0.0",
+  "description": "Islamic API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "islamic",
+    "hadith",
+    "athker",
+    "quran",
+    "adaia"
+  ],
+  "author": "Raheq al-islam",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^5.9.0",
+    "ioredis": "^5.11.1"
+  }
+}
