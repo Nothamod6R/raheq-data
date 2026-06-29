@@ -240,9 +240,8 @@ export const getQuranNormalText = async (request, reply) => {
     const cacheKey = `quran_text:normal:${surah || 'all'}:${ayah || 'all'}:${keyword || 'all'}`;
 
     const data = await handleCache(cacheKey, async () => {
-        const filePath = path.join(process.cwd(), 'database', 'quran', 'text', 'quran_normal_text.json');
-        let quranData = await readJsonFile(filePath);
-
+        const normalPath = path.join(process.cwd(), 'database', 'quran', 'text', 'quran_normal_text.json');
+        let quranData = await readJsonFile(normalPath);
         if (surah) {
             const searchSurah = surah.toString().trim();
             quranData = quranData.filter(item => 
@@ -273,29 +272,48 @@ export const getQuranWithGlyphsText = async (request, reply) => {
     const cacheKey = `quran_text:glyphs:${surah || 'all'}:${ayah || 'all'}:${keyword || 'all'}`;
 
     const data = await handleCache(cacheKey, async () => {
-        const filePath = path.join(process.cwd(), 'database', 'quran', 'text', 'quran.json');
-        let quranData = await readJsonFile(filePath);
+        const normalPath = path.join(process.cwd(), 'database', 'quran', 'text', 'quran_normal_text.json');
+        const glyphsPath = path.join(process.cwd(), 'database', 'quran', 'text', 'quran.json');
+
+        let normalData = await readJsonFile(normalPath);
+        const glyphsData = await readJsonFile(glyphsPath);
 
         if (surah) {
             const searchSurah = surah.toString().trim();
-            quranData = quranData.filter(item => 
+            normalData = normalData.filter(item => 
                 (item.surah_number || item.surah || '').toString().trim() === searchSurah
             );
         }
         if (ayah) {
             const searchAyah = ayah.toString().trim();
-            quranData = quranData.filter(item => 
+            normalData = normalData.filter(item => 
                 (item.verse_number || item.verse || item.ayah || item.aya || '').toString().trim() === searchAyah
             );
         }
         if (keyword) {
             const cleanKeyword = cleanArabicForSearch(keyword).toLowerCase();
-            quranData = quranData.filter(item => {
+            normalData = normalData.filter(item => {
                 const cleanContent = cleanArabicForSearch(item.content).toLowerCase();
                 return cleanContent.includes(cleanKeyword);
             });
         }
-        return quranData;
+
+        const glyphsMap = new Map(
+            glyphsData.map(item => [`${item.surah_number}:${item.verse_number}`, item])
+        );
+
+        const result = normalData.map(normalItem => {
+            const key = `${normalItem.surah_number}:${normalItem.verse_number}`;
+            const glyphMatch = glyphsMap.get(key);
+            
+            return glyphMatch ? glyphMatch : {
+                surah_number: normalItem.surah_number,
+                verse_number: normalItem.verse_number,
+                content: normalItem.content
+            };
+        });
+
+        return result;
     });
 
     return reply.send(data);
