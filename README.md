@@ -130,15 +130,33 @@ curl "http://localhost:3000/api/adaia/sunnah?keyword=صلاة"
 ---
 
 ### 4) الأسئلة والأجوبة
-#### جلب الأسئلة
+#### (أ) جلب الأسئلة
 - **GET** `/api/questions`
 - Query parameters:
   - `keyword` (اختياري) — ضمن `question_name` أو ضمن الإجابات
-  - `level` (اختياري) — مستوى السؤال (كما هو موجود في البيانات)
+  - `level` (اختياري) — مستوى السؤال (`easy|medium|hard` كما هو موجود في البيانات)
 
 مثال:
 ```bash
-curl "http://localhost:3000/api/questions?level=1&keyword=طهارة"
+curl "http://localhost:3000/api/questions?level=easy&keyword=طهارة"
+```
+
+---
+
+#### (ب) أسئلة عشوائية
+- **GET** `/api/questions/random`
+- Query parameters:
+  - `diffuclt` (اختياري) — مستوى الصعوبة: `easy` أو `medium` أو `hard` أو `random` (افتراضيًا: `random`)
+  - `count` (اختياري) — عدد الأسئلة العشوائية (افتراضيًا: `1`)
+
+مثال (عشوائي - متوسط - 5 أسئلة):
+```bash
+curl "http://localhost:3000/api/questions/random?diffuclt=medium&count=5"
+```
+
+مثال (عشوائي من أي مستوى):
+```bash
+curl "http://localhost:3000/api/questions/random?diffuclt=random&count=3"
 ```
 
 ---

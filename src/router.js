@@ -2,8 +2,9 @@ import {
     getAthkar, 
     getQuranAdaia, 
     getSunnahAdaia, 
-    getQuestions, 
-    getTafseerMetadata, 
+    getQuestions,
+    getRandomQuestions,
+    getTafseerMetadata,
     getSingleTafseerMetadata,
     getQuranTafseer,
     getQuranNormalText,
@@ -21,6 +22,7 @@ export const appRoutes = async (fastify, options) => {
     fastify.get('/api/adaia/quran', { preHandler: [validateSearchParams] }, getQuranAdaia);
     fastify.get('/api/adaia/sunnah', { preHandler: [validateSearchParams] }, getSunnahAdaia);
     fastify.get('/api/questions', { preHandler: [validateSearchParams] }, getQuestions);
+    fastify.get('/api/questions/random', { preHandler: [validateSearchParams] }, getRandomQuestions);
     
     fastify.get('/api/quran/tafsser/metadata', getTafseerMetadata);
     fastify.get('/api/quran/tafsser/:typeText/metadata', getSingleTafseerMetadata);
