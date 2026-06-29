@@ -7,7 +7,7 @@ const readJsonFile = async (filePath) => {
         const data = await fs.readFile(filePath, 'utf-8');
         return JSON.parse(data);
     } catch (error) {
-        throw new Error(`Error While reading file: ${error.message}`);
+        throw new Error(`ERROR While reading file: ${error.message}`);
     }
 };
 
@@ -23,6 +23,21 @@ const handleCache = async (cacheKey, fetchFunction) => {
     } catch {
         return await fetchFunction();
     }
+};
+
+const cleanArabicForSearch = (text) => {
+    if (!text) return '';
+    return text
+        .toString()
+        .replace(/[\u064B-\u0652]/g, '') 
+        .replace(/[\u06D6-\u06ED]/g, '') 
+        .replace(/[\u0610-\u061A]/g, '') 
+        .replace(/[\u0653-\u065F]/g, '') 
+        .replace(/[\u0670]/g, '')       
+        .replace(/[إأآا]/g, 'ا')        
+        .replace(/[ة]/g, 'ه')           
+        .replace(/[ى]/g, 'ي')           
+        .trim();
 };
 
 const tafaseerMetadata = [
@@ -170,7 +185,7 @@ export const getSingleTafseerMetadata = async (request, reply) => {
     const { typeText } = request.params;
     const targetTafseer = tafaseerMetadata.find(t => t.typeText === typeText);
     if (!targetTafseer) {
-        return reply.status(404).send({ error: "Not Found", message: "tafsser not found." });
+        return reply.status(404).send({ error: "Not Found", message: "ERROR: Can't found the tafsser." });
     }
     return reply.send(targetTafseer);
 };
@@ -181,7 +196,7 @@ export const getQuranTafseer = async (request, reply) => {
 
     const targetTafseer = tafaseerMetadata.find(t => t.typeText === typeText);
     if (!targetTafseer) {
-        return reply.status(404).send({ error: "Not Found", message: "tafsser not found." });
+        return reply.status(404).send({ error: "Not Found", message: "ERROR: Can't found the tafsser." });
     }
 
     const cacheKey = `tafseer:${typeText}:${surah || 'all'}:${ayah || 'all'}:${keyword || 'all'}`;
@@ -217,5 +232,166 @@ export const getQuranTafseer = async (request, reply) => {
         };
     });
 
+    return reply.send(data);
+};
+
+export const getQuranNormalText = async (request, reply) => {
+    const { surah, ayah, keyword } = request.query;
+    const cacheKey = `quran_text:normal:${surah || 'all'}:${ayah || 'all'}:${keyword || 'all'}`;
+
+    const data = await handleCache(cacheKey, async () => {
+        const filePath = path.join(process.cwd(), 'database', 'quran', 'text', 'quran_normal_text.json');
+        let quranData = await readJsonFile(filePath);
+
+        if (surah) {
+            const searchSurah = surah.toString().trim();
+            quranData = quranData.filter(item => 
+                (item.surah_number || item.surah || '').toString().trim() === searchSurah
+            );
+        }
+        if (ayah) {
+            const searchAyah = ayah.toString().trim();
+            quranData = quranData.filter(item => 
+                (item.verse_number || item.verse || item.ayah || item.aya || '').toString().trim() === searchAyah
+            );
+        }
+        if (keyword) {
+            const cleanKeyword = cleanArabicForSearch(keyword).toLowerCase();
+            quranData = quranData.filter(item => {
+                const cleanContent = cleanArabicForSearch(item.content).toLowerCase();
+                return cleanContent.includes(cleanKeyword);
+            });
+        }
+        return quranData;
+    });
+
+    return reply.send(data);
+};
+
+export const getQuranWithGlyphsText = async (request, reply) => {
+    const { surah, ayah, keyword } = request.query;
+    const cacheKey = `quran_text:glyphs:${surah || 'all'}:${ayah || 'all'}:${keyword || 'all'}`;
+
+    const data = await handleCache(cacheKey, async () => {
+        const filePath = path.join(process.cwd(), 'database', 'quran', 'text', 'quran.json');
+        let quranData = await readJsonFile(filePath);
+
+        if (surah) {
+            const searchSurah = surah.toString().trim();
+            quranData = quranData.filter(item => 
+                (item.surah_number || item.surah || '').toString().trim() === searchSurah
+            );
+        }
+        if (ayah) {
+            const searchAyah = ayah.toString().trim();
+            quranData = quranData.filter(item => 
+                (item.verse_number || item.verse || item.ayah || item.aya || '').toString().trim() === searchAyah
+            );
+        }
+        if (keyword) {
+            const cleanKeyword = cleanArabicForSearch(keyword).toLowerCase();
+            quranData = quranData.filter(item => {
+                const cleanContent = cleanArabicForSearch(item.content).toLowerCase();
+                return cleanContent.includes(cleanKeyword);
+            });
+        }
+        return quranData;
+    });
+
+    return reply.send(data);
+};
+
+export const getJuzMetadata = async (request, reply) => {
+    const { surah } = request.query;
+    const cacheKey = `quran_metadata:juz:${surah || 'all'}`;
+
+    const data = await handleCache(cacheKey, async () => {
+        const filePath = path.join(process.cwd(), 'database', 'quran', "metadata",'juz.json');
+        let juzData = await readJsonFile(filePath);
+
+        if (surah) {
+            const searchSurah = parseInt(surah, 10);
+            juzData = juzData.filter(item => item.surahs && item.surahs.includes(searchSurah));
+        }
+        return juzData;
+    });
+    return reply.send(data);
+};
+
+export const getPageDataMetadata = async (request, reply) => {
+    const { surah, ayah } = request.query;
+    const cacheKey = `quran_metadata:page:${surah || 'all'}:${ayah || 'all'}`;
+
+    const data = await handleCache(cacheKey, async () => {
+        const filePath = path.join(process.cwd(), 'database', 'quran', "metadata",'page_data.json');
+        let pageData = await readJsonFile(filePath);
+        if (surah) {
+            const searchSurah = surah.toString().trim();
+            pageData = pageData.filter(item => (item.surah || '').toString().trim() === searchSurah);
+        }
+        if (ayah) {
+            const searchAyah = parseInt(ayah, 10);
+            pageData = pageData.filter(item => searchAyah >= parseInt(item.start, 10) && searchAyah <= parseInt(item.end, 10));
+        }
+        return pageData;
+    });
+    return reply.send(data);
+};
+
+export const getQuartersMetadata = async (request, reply) => {
+    const { surah, ayah } = request.query;
+    const cacheKey = `quran_metadata:quarters:${surah || 'all'}:${ayah || 'all'}`;
+
+    const data = await handleCache(cacheKey, async () => {
+        const filePath = path.join(process.cwd(), 'database', 'quran', "metadata",'quarters.json');
+        let quartersData = await readJsonFile(filePath);
+        if (surah) {
+            const searchSurah = surah.toString().trim();
+            quartersData = quartersData.filter(item => (item.surah || '').toString().trim() === searchSurah);
+        }
+        if (ayah) {
+            const searchAyah = ayah.toString().trim();
+            quartersData = quartersData.filter(item => (item.ayah || item.aya || '').toString().trim() === searchAyah);
+        }
+        return quartersData;
+    });
+
+    return reply.send(data);
+};
+
+export const getSajdahMetadata = async (request, reply) => {
+    const { surah, ayah } = request.query;
+    const cacheKey = `quran_metadata:sajdah:${surah || 'all'}:${ayah || 'all'}`;
+
+    const data = await handleCache(cacheKey, async () => {
+        const filePath = path.join(process.cwd(), 'database', 'quran', "metadata",'sajdah_verses.json');
+        let sajdahData = await readJsonFile(filePath);
+        if (surah) {
+            const searchSurah = surah.toString().trim();
+            sajdahData = sajdahData.filter(item => (item.surah || '').toString().trim() === searchSurah);
+        }
+        if (ayah) {
+            const searchAyah = ayah.toString().trim();
+            sajdahData = sajdahData.filter(item => (item.ayah || item.aya || '').toString().trim() === searchAyah);
+        }
+        return sajdahData;
+    });
+
+    return reply.send(data);
+};
+
+export const getSurahsMetadata = async (request, reply) => {
+    const { number } = request.query;
+    const cacheKey = `quran_metadata:surahs:${number || 'all'}`;
+
+    const data = await handleCache(cacheKey, async () => {
+        const filePath = path.join(process.cwd(), 'database', 'quran', "metadata", 'surahs.json');
+        let surahsData = await readJsonFile(filePath);
+        if (number) {
+            const searchNumber = number.toString().trim();
+            surahsData = surahsData.filter(item => (item.number || '').toString().trim() === searchNumber);
+        }
+        return surahsData;
+    });
     return reply.send(data);
 };
