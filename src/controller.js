@@ -211,6 +211,19 @@ export const getRandomQuestions = async (request, reply) => {
     return reply.send(data);
 };
 
+export const getQuestionsVersion = async (request, reply) => {
+    const cacheKey = `questions:version`;
+    const data = await handleCache(cacheKey, async () => {
+        const filePath = path.join(process.cwd(), 'database', 'questions', 'questions.json');
+
+        const version = await readJsonFile(filePath);
+
+        return version[0]?.version ?? 0;
+    });
+
+    return reply.send({ version: data });
+};
+
 export const getTafseerMetadata = async (request, reply) => {
     return reply.send(tafaseerMetadata);
 };

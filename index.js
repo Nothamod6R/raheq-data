@@ -2,7 +2,7 @@ import Fastify from 'fastify';
 import Redis from 'ioredis';
 import { appRoutes } from './src/router.js';
 
-const fastify = Fastify({ logger: false });
+const fastify = Fastify({ logger: true });
 
 export const redisClient = new Redis({
     host: process.env.REDIS_HOST || '127.0.0.1',

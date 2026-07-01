@@ -159,6 +159,13 @@ curl "http://localhost:3000/api/questions/random?diffuclt=medium&count=5"
 curl "http://localhost:3000/api/questions/random?diffuclt=random&count=3"
 ```
 
+#### (ج) الإصدار الخاص بالاسئلة
+- **GET** `/api/questions/version`
+مثال:
+```bash
+curl "http://localhost:3000/api/questions/version"
+```
+
 ---
 
 ## 5) التفاسير (Tafseer)
