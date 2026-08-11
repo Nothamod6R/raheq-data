@@ -1,6 +1,6 @@
 import Fastify from 'fastify';
 import Redis from 'ioredis';
-import { appRoutes } from './src/router.js';
+import { appRoutes } from './src/route.js';
 
 const fastify = Fastify({ logger: true });
 

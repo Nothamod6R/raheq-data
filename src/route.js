@@ -1,10 +1,14 @@
-import { 
-    getAthkar, 
-    getQuranAdaia, 
-    getSunnahAdaia, 
+import {
+    getAthkar,
+    getQuranAdaia,
+    getSunnahAdaia
+} from './controllers/athkar.js';
+import {
     getQuestions,
     getRandomQuestions,
-    getQuestionsVersion,
+    getQuestionsVersion
+} from './controllers/questions.js';
+import {
     getTafseerMetadata,
     getSingleTafseerMetadata,
     getQuranTafseer,
@@ -15,7 +19,7 @@ import {
     getQuartersMetadata,
     getSajdahMetadata,
     getSurahsMetadata
-} from './controller.js';
+} from './controllers/quran.js';
 import { validateSearchParams } from './middleware.js';
 
 export const appRoutes = async (fastify, options) => {

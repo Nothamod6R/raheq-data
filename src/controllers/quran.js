@@ -1,46 +1,5 @@
-import fs from 'fs/promises';
 import path from 'path';
-import { redisClient } from '../index.js';
-import { shuffleArray } from './utils.js';
-
-
-const readJsonFile = async (filePath) => {
-    try {
-        const data = await fs.readFile(filePath, 'utf-8');
-        return JSON.parse(data);
-    } catch (error) {
-        throw new Error(`ERROR While reading file: ${error.message}`);
-    }
-};
-
-const handleCache = async (cacheKey, fetchFunction) => {
-    try {
-        const cachedData = await redisClient.get(cacheKey);
-        if (cachedData) {
-            return JSON.parse(cachedData);
-        }
-        const freshData = await fetchFunction();
-        await redisClient.set(cacheKey, JSON.stringify(freshData));
-        return freshData;
-    } catch {
-        return await fetchFunction();
-    }
-};
-
-const cleanArabicForSearch = (text) => {
-    if (!text) return '';
-    return text
-        .toString()
-        .replace(/[\u064B-\u0652]/g, '') 
-        .replace(/[\u06D6-\u06ED]/g, '') 
-        .replace(/[\u0610-\u061A]/g, '') 
-        .replace(/[\u0653-\u065F]/g, '') 
-        .replace(/[\u0670]/g, '')       
-        .replace(/[إأآا]/g, 'ا')        
-        .replace(/[ة]/g, 'ه')           
-        .replace(/[ى]/g, 'ي')           
-        .trim();
-};
+import { readJsonFile, handleCache, removeArabicDiacritics } from '../utils.js';
 
 const tafaseerMetadata = [
     { typeText: 'ar_muyassar', typeTextInRelatedLanguage: 'التفسير الميسر', typeInNativeLanguage: 'العربية' },
@@ -74,155 +33,13 @@ const tafaseerMetadata = [
     { typeText: 'sq_nahi', typeTextInRelatedLanguage: 'Shqiptar - Efendi Nahi', typeInNativeLanguage: 'Albanian' },
     { typeText: 'sv_bernstrom', typeTextInRelatedLanguage: 'Swedish - Bernström', typeInNativeLanguage: 'Swedish' },
     { typeText: 'sw_barwani', typeTextInRelatedLanguage: 'Swahili - Al-Barwani', typeInNativeLanguage: 'Swahili' },
-    { typeText: 'ta_tamil', typeTextInRelatedLanguage: 'தமிழ் - ஜான் டிரสต์', typeInNativeLanguage: 'Tamil' },
+    { typeText: 'ta_tamil', typeTextInRelatedLanguage: 'தமிழ் - ஜான் டிரஸ்ட்', typeInNativeLanguage: 'Tamil' },
     { typeText: 'th_thai', typeTextInRelatedLanguage: 'ภาษาไทย - ภาษาไทย', typeInNativeLanguage: 'Thai' },
     { typeText: 'tr_diyanet', typeTextInRelatedLanguage: 'Türkçe - Diyanet Isleri', typeInNativeLanguage: 'Turkish' },
     { typeText: 'ur_jalandhry', typeTextInRelatedLanguage: 'اردو - جالندربرى', typeInNativeLanguage: 'Urdu' },
     { typeText: 'uz_sodik', typeTextInRelatedLanguage: 'Uzbek - Мухаммад الصدّيق', typeInNativeLanguage: 'Uzbek' },
     { typeText: 'zh_jian', typeTextInRelatedLanguage: '中国语文 - Ma Jian', typeInNativeLanguage: 'Chinese' }
 ];
-
-export const getAthkar = async (request, reply) => {
-    const { keyword, category } = request.query;
-    const cacheKey = `athkar:${category || 'all'}:${keyword || 'all'}`;
-
-    const data = await handleCache(cacheKey, async () => {
-        const filePath = path.join(process.cwd(), 'database', 'athker_adaia', 'athkar.json');
-        let result = await readJsonFile(filePath);
-
-        if (category) {
-            result = result.filter(item => item.category.includes(category));
-        }
-
-        if (keyword) {
-            const lowerKeyword = keyword.toLowerCase();
-            result = result.map(item => {
-                const filteredArray = item.array.filter(azkar => 
-                    azkar.text.toLowerCase().includes(lowerKeyword)
-                );
-                if (item.category.toLowerCase().includes(lowerKeyword)) {
-                    return item;
-                } else if (filteredArray.length > 0) {
-                    return { ...item, array: filteredArray };
-                }
-                return null;
-            }).filter(item => item !== null);
-        }
-        return result;
-    });
-
-    return reply.send(data);
-};
-
-export const getQuranAdaia = async (request, reply) => {
-    const { keyword } = request.query;
-    const cacheKey = `quran_adaia:${keyword || 'all'}`;
-
-    const data = await handleCache(cacheKey, async () => {
-        const filePath = path.join(process.cwd(), 'database', 'athker_adaia', 'quran_adaia.json');
-        const fileData = await readJsonFile(filePath);
-        if (keyword) {
-            const lowerKeyword = keyword.toLowerCase();
-            return fileData.filter(item => 
-                item.text.toLowerCase().includes(lowerKeyword) || 
-                item.reference.toLowerCase().includes(lowerKeyword)
-            );
-        }
-        return fileData;
-    });
-
-    return reply.send(data);
-};
-
-export const getSunnahAdaia = async (request, reply) => {
-    const { keyword } = request.query;
-    const cacheKey = `sunnah_adaia:${keyword || 'all'}`;
-
-    const data = await handleCache(cacheKey, async () => {
-        const filePath = path.join(process.cwd(), 'database', 'athker_adaia', 'sna_adaia.json');
-        const fileData = await readJsonFile(filePath);
-        if (keyword) {
-            const lowerKeyword = keyword.toLowerCase();
-            return fileData.filter(item => 
-                item.text.toLowerCase().includes(lowerKeyword) || 
-                item.reference.toLowerCase().includes(lowerKeyword)
-            );
-        }
-        return fileData;
-    });
-
-    return reply.send(data);
-};
-
-export const getQuestions = async (request, reply) => {
-    const { keyword, level } = request.query;
-    const cacheKey = `questions:${level || 'all'}:${keyword || 'all'}`;
-
-    const data = await handleCache(cacheKey, async () => {
-        const filePath = path.join(process.cwd(), 'database', 'questions', 'questions.json');
-        let filtered = await readJsonFile(filePath);
-
-        if (level) {
-            filtered = filtered.filter(q => q.level === level);
-        }
-
-        if (keyword) {
-            const lowerKeyword = keyword.toLowerCase();
-            filtered = filtered.filter(q => 
-                q.question_name.toLowerCase().includes(lowerKeyword) ||
-                q.answers.some(ans => ans.toLowerCase().includes(lowerKeyword))
-            );
-        }
-        return filtered;
-    });
-
-    return reply.send(data);
-};
-
-export const getRandomQuestions = async (request, reply) => {
-    const { diffuclt, count } = request.query;
-
-    const normalizedDiff = (diffuclt || 'random').toString().trim().toLowerCase();
-    const requestedCount = count === undefined ? 1 : parseInt(count.toString().trim(), 10);
-    const safeCount = Number.isInteger(requestedCount) && requestedCount > 0 ? requestedCount : 1;
-
-    const cacheKey = `questions:random:${normalizedDiff}:${safeCount}`;
-
-    const data = await handleCache(cacheKey, async () => {
-        const filePath = path.join(process.cwd(), 'database', 'questions', 'questions.json');
-        const allQuestions = await readJsonFile(filePath);
-
-        const allowedLevels = new Set(['easy', 'medium', 'hard']);
-        let pool = allQuestions;
-
-        if (allowedLevels.has(normalizedDiff)) {
-            pool = allQuestions.filter(q => q.level === normalizedDiff);
-        } else {
-            // random: pick a random level from available ones and then sample from it
-            const levelsPresent = ['easy', 'medium', 'hard'].filter(l => allQuestions.some(q => q.level === l));
-            const chosenLevel = levelsPresent[Math.floor(Math.random() * levelsPresent.length)] || 'easy';
-            pool = allQuestions.filter(q => q.level === chosenLevel);
-        }
-
-        const randomized = shuffleArray(pool);
-        return randomized.slice(0, Math.min(safeCount, randomized.length));
-    });
-
-    return reply.send(data);
-};
-
-export const getQuestionsVersion = async (request, reply) => {
-    const cacheKey = `questions:version`;
-    const data = await handleCache(cacheKey, async () => {
-        const filePath = path.join(process.cwd(), 'database', 'questions', 'questions.json');
-
-        const version = await readJsonFile(filePath);
-
-        return version[0]?.version ?? 0;
-    });
-
-    return reply.send({ version: data });
-};
 
 export const getTafseerMetadata = async (request, reply) => {
     return reply.send(tafaseerMetadata);
@@ -302,9 +119,9 @@ export const getQuranNormalText = async (request, reply) => {
             );
         }
         if (keyword) {
-            const cleanKeyword = cleanArabicForSearch(keyword).toLowerCase();
+            const cleanKeyword = removeArabicDiacritics(keyword).toLowerCase();
             quranData = quranData.filter(item => {
-                const cleanContent = cleanArabicForSearch(item.content).toLowerCase();
+                const cleanContent = removeArabicDiacritics(item.content).toLowerCase();
                 return cleanContent.includes(cleanKeyword);
             });
         }
@@ -338,9 +155,9 @@ export const getQuranWithGlyphsText = async (request, reply) => {
             );
         }
         if (keyword) {
-            const cleanKeyword = cleanArabicForSearch(keyword).toLowerCase();
+            const cleanKeyword = removeArabicDiacritics(keyword).toLowerCase();
             normalData = normalData.filter(item => {
-                const cleanContent = cleanArabicForSearch(item.content).toLowerCase();
+                const cleanContent = removeArabicDiacritics(item.content).toLowerCase();
                 return cleanContent.includes(cleanKeyword);
             });
         }
@@ -366,14 +183,14 @@ export const getQuranWithGlyphsText = async (request, reply) => {
     return reply.send(data);
 };
 
+
 export const getJuzMetadata = async (request, reply) => {
     const { surah } = request.query;
     const cacheKey = `quran_metadata:juz:${surah || 'all'}`;
 
     const data = await handleCache(cacheKey, async () => {
-        const filePath = path.join(process.cwd(), 'database', 'quran', "metadata",'juz.json');
+        const filePath = path.join(process.cwd(), 'database', 'quran', "metadata", 'juz.json');
         let juzData = await readJsonFile(filePath);
-
         if (surah) {
             const searchSurah = parseInt(surah, 10);
             juzData = juzData.filter(item => item.surahs && item.surahs.includes(searchSurah));
@@ -460,3 +277,4 @@ export const getSurahsMetadata = async (request, reply) => {
     });
     return reply.send(data);
 };
+
