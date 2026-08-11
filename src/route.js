@@ -20,6 +20,7 @@ import {
     getSajdahMetadata,
     getSurahsMetadata
 } from './controllers/quran.js';
+import { getPrayerTimes } from './controllers/prayer.js';
 import { validateSearchParams } from './middleware.js';
 
 export const appRoutes = async (fastify, options) => {
@@ -30,6 +31,8 @@ export const appRoutes = async (fastify, options) => {
     fastify.get('/api/questions', { preHandler: [validateSearchParams] }, getQuestions);
     fastify.get('/api/questions/random', { preHandler: [validateSearchParams] }, getRandomQuestions);
     fastify.get('/api/questions/version', getQuestionsVersion);
+
+    fastify.get('/api/prayer-times', getPrayerTimes);
     
     fastify.get('/api/quran/tafsser/metadata', getTafseerMetadata);
     fastify.get('/api/quran/tafsser/:typeText/metadata', getSingleTafseerMetadata);
