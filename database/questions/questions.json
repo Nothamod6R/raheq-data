@@ -1705,5 +1705,17 @@
       "علي بن أبي طالب"
     ],
     "correct_answer": 3
+  },
+  {
+    "id": 142,
+    "level": "easy",
+    "question_name": "متى وقعت غزوة الاحزاب",
+    "answers": [
+      "2هـ",
+      "3هـ",
+      "5هـ",
+      "7هـ"
+    ],
+    "correct_answer": 2
   }
 ]
