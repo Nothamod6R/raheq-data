@@ -1,5 +1,6 @@
 import path from 'path';
 import { readJsonFile, handleCache, removeArabicDiacritics } from '../utils.js';
+import { withVerse } from '../services/similar.js';
 
 const tafaseerMetadata = [
     { typeText: 'ar_muyassar', typeTextInRelatedLanguage: 'التفسير الميسر', typeInNativeLanguage: 'العربية' },
@@ -125,7 +126,7 @@ export const getQuranNormalText = async (request, reply) => {
                 return cleanContent.includes(cleanKeyword);
             });
         }
-        return quranData;
+        return quranData.map(withVerse);
     });
 
     return reply.send(data);
@@ -177,7 +178,7 @@ export const getQuranWithGlyphsText = async (request, reply) => {
             };
         });
 
-        return result;
+        return result.map(withVerse);
     });
 
     return reply.send(data);

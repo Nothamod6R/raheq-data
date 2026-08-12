@@ -9,7 +9,7 @@
 - أدعية السنة (`/api/adaia/sunnah`)
 - أسئلة وأجوبة (`/api/questions`)
 - التفاسير (metadata + نصوص التفسير) (`/api/quran/tafsser/...`)
-- نص القرآن (بشكل عادي أو مع حروف/رموز) (`/api/quran/text/...`)
+- نص القرآن (بشكل عادي أو مع حروف/رموز) (`/api/quran/text/...`) — مع حقل الآيات المتشابهة `similar`
 - بيانات ميتاداتا للقرآن (الجزء/الصفحة/الأرباع/السجود/السور) (`/api/quran/metadata/...`)
 
 > ملاحظة: إذا لم يتوفر Redis سيستمر تشغيل الـ API لكن بدون cache.
@@ -229,7 +229,30 @@ curl "http://localhost:3000/api/quran/tafsser/ar_muyassar?surah=2&ayah=255"
 
 مثال:
 ```bash
-curl "http://localhost:3000/api/quran/text/normal?surah=1&ayah=1"
+curl "http://localhost:3000/api/quran/text/normal?surah=2&ayah=2"
+```
+
+#### الحقل `similar` (الآيات المتشابهة)
+- كل آية في الاستجابة تحتوي على حقل إضافي باسم `similar` من نوع **`array of strings`** (مصفوفة نصوص).
+- قيمته معرفات الآيات المتشابهة بصيغة `surah:ayah`، مثل: `"8:2"`، `"27:2"`، `"31:3"`.
+- يرتبط الحقل بالآية المطلوبة فقط (علاقة باتجاه واحد، ولا تُعاد الآية المعاكسة تلقائيًا).
+- إذا لم توجد آيات متشابهة للآية المطلوبة تُرجع المصفوفة الفارغة `[]` (وليس `null`)، ولا يتم حذف الحقل أبدًا.
+- البيانات مأخوذة من `database/quran/text/similar.json` وتُحمّل مرة واحدة عند تشغيل الخادم (لا تتم قراءة الملف عند كل طلب).
+
+مثال على الاستجابة:
+```json
+[
+  {
+    "surah_number": 2,
+    "verse_number": 2,
+    "content": "...",
+    "similar": [
+      "8:2",
+      "27:2",
+      "31:3"
+    ]
+  }
+]
 ```
 
 ---
@@ -247,6 +270,8 @@ curl "http://localhost:3000/api/quran/text/normal?surah=1&ayah=1"
 ```bash
 curl "http://localhost:3000/api/quran/text/glyphs?surah=2&ayah=255"
 ```
+
+ملاحظة: كل آية في هذا الـ endpoint تحمل أيضًا الحقل `similar` بنفس مواصفات النص العادي أعلاه (مصفوفة نصوص بصيغة `surah:ayah`، وتُرجع `[]` عند عدم وجود آيات متشابهة).
 
 ---
 
@@ -797,6 +822,7 @@ utcOffset=11
 - `database/questions/questions.json`
 - `database/quran/tafsser/*.json` (ملفات التفاسير)
 - `database/quran/text/quran_normal_text.json` و `database/quran/text/quran.json`
+- `database/quran/text/similar.json` (بيانات الآيات المتشابهة `similar`)
 - `database/quran/metadata/*.json`
 
 ---
