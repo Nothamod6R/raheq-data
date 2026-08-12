@@ -3,7 +3,7 @@ import {
     formatMinutes,
     SUPPORTED_METHODS,
     SUPPORTED_MADHABS
-} from '../prayer-times.js';
+} from '../services/prayer-times.js';
 
 const LATITUDE_RANGE = { min: -90, max: 90 };
 const LONGITUDE_RANGE = { min: -180, max: 180 };
