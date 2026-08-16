@@ -4,11 +4,13 @@ const hijriMonthNames = [
     'رمضان', 'شوال', 'ذو القعدة', 'ذو الحجة',
 ];
 
-function gregorianToHijri(date) {
-    const d = date instanceof Date ? date : new Date(date);
+function gregorianToHijri(date, days = 0) {
+    const d = date instanceof Date ? new Date(date) : new Date(date);
     if (isNaN(d.getTime())) {
         throw new Error('Invaild date');
     }
+
+    d.setUTCDate(d.getUTCDate() + days);
 
     const formatter = new Intl.DateTimeFormat('en-TN-u-ca-islamic', {
         year: 'numeric',
@@ -144,10 +146,22 @@ export const getGregorianFromHijri = async (request, reply) => {
 
 export const getTodayHijri = async (request, reply) => {
     try {
-        const result = gregorianToHijri(new Date());
+        const { days } = request.query;
+        const offset = days ? parseInt(days, 10) : 0;
+
+        if (isNaN(offset)) {
+            return reply.code(400).send({
+                success: false,
+                message: 'Invalid days value',
+            });
+        }
+
+        const result = gregorianToHijri(new Date(), offset);
+
         return reply.code(200).send({
             success: true,
             gregorian: new Date().toISOString().split('T')[0],
+            daysOffset: offset,
             hijri: result,
         });
     } catch (error) {
