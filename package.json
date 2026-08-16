@@ -17,6 +17,8 @@
   "author": "Raheq al-islam",
   "license": "ISC",
   "dependencies": {
+    "@fastify/swagger": "^9.8.1",
+    "@fastify/swagger-ui": "^6.1.1",
     "dotenv": "^17.4.2",
     "fastify": "^5.9.0",
     "ioredis": "^5.11.1"
