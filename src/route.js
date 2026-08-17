@@ -21,6 +21,7 @@ import {
     getSurahsMetadata
 } from './controllers/quran.js';
 import { getPrayerTimes } from './controllers/prayer.js';
+import { getPrayerMetadata } from "./services/prayer-metadata.js";
 import { validateSearchParams } from './middleware.js';
 import {
     getHijriFromGregorian,
@@ -39,6 +40,7 @@ export const appRoutes = async (fastify, options) => {
     fastify.get('/api/questions/version', getQuestionsVersion);
 
     fastify.get('/api/prayer-times', getPrayerTimes);
+    fastify.get('/api/prayer/metadata', getPrayerMetadata);
 
     fastify.get('/api/hijri/today', getTodayHijri);
     fastify.get('/api/hijri/from-gregorian', getHijriFromGregorian);
