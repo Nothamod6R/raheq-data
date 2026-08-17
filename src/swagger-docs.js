@@ -25,6 +25,54 @@ export const components = {
     },
     required: ['error', 'message']
   },
+  PrayerMetadata: {
+        type: 'object',
+        properties: {
+          name: {
+            type: 'string',
+            example: 'Fajr'
+          },
+          arabicName: {
+            type: 'string',
+            example: 'الفجر'
+          },
+          rakahs: {
+            type: 'integer',
+            example: 2
+          },
+          sajdahs: {
+            type: 'integer',
+            example: 4
+          },
+          sunnahBefore: {
+            oneOf: [
+              {
+                type: 'integer'
+              },
+              {
+                type: 'array',
+                items: {
+                  type: 'integer'
+                }
+              }
+            ],
+            example: 2
+          },
+          sunnahAfter: {
+            type: 'integer',
+            example: 0
+          }
+        },
+        required: [
+          'name',
+          'arabicName',
+          'rakahs',
+          'sajdahs',
+          'sunnahBefore',
+          'sunnahAfter'
+        ]
+      },
+
   AthkarItem: {
     type: 'object',
     description: 'A single dhikr within an athkar category.',
@@ -360,6 +408,17 @@ const HIJRI_DATE_EXAMPLE = {
   formattedArabic: '3 ربيع الأول 1448 هـ'
 };
 
+const PRAYER_METADATA_EXAMPLE = {
+  data: {
+    name: 'Asr',
+    arabicName: 'العصر',
+    rakahs: 4,
+    sajdahs: 8,
+    sunnahBefore: [0, 4],
+    sunnahAfter: 0
+  }
+};
+
 const operations = {
   '/api/athkar': {
     get: {
@@ -491,6 +550,55 @@ const operations = {
       }
     }
   },
+'/api/prayer/metadata': {
+  get: {
+    tags: ['Prayer MetaData'],
+    summary: 'Get prayer metadata',
+    description:
+      'Get metadata for a prayer including its name, Arabic name, rakahs, sajdahs, and sunnah information.',
+    parameters: [
+      queryParam(
+        'prayer',
+        {
+          type: 'string',
+          enum: ['fajr', 'dhuhr', 'asr', 'maghrib', 'isha']
+        },
+        'Prayer name.',
+        true
+      )
+    ],
+    responses: {
+      200: json(
+        {
+          type: 'object',
+          properties: {
+            data: {
+              $ref: '#/components/schemas/PrayerMetadata'
+            }
+          },
+          required: ['data']
+        },
+        PRAYER_METADATA_EXAMPLE
+      ),
+
+      400: jsonErr(
+        {
+          type: 'object',
+          properties: {
+            error: {
+              type: 'string'
+            }
+          },
+          required: ['error']
+        },
+        {
+          error: 'Invalid prayer name'
+        },
+        'Bad Request - prayer must be one of fajr, dhuhr, asr, maghrib or isha.'
+      )
+    }
+  }
+},
   '/api/hijri/today': {
     get: {
       tags: ['Hijri Calendar'],

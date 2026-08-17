@@ -1,0 +1,42 @@
+{
+  "fajr": {
+    "name": "Fajr",
+    "arabicName": "الفجر",
+    "rakahs": 2,
+    "sajdahs": 4,
+    "sunnahBefore": 2,
+    "sunnahAfter": 0
+  },
+  "dhuhr": {
+    "name": "Dhuhr",
+    "arabicName": "الظهر",
+    "rakahs": 4,
+    "sajdahs": 8,
+    "sunnahBefore": 4,
+    "sunnahAfter": 2
+  },
+  "asr": {
+    "name": "Asr",
+    "arabicName": "العصر",
+    "rakahs": 4,
+    "sajdahs": 8,
+    "sunnahBefore": [0, 4],
+    "sunnahAfter": 0
+  },
+  "maghrib": {
+    "name": "Maghrib",
+    "arabicName": "المغرب",
+    "rakahs": 3,
+    "sajdahs": 6,
+    "sunnahBefore": 0,
+    "sunnahAfter": 2
+  },
+  "isha": {
+    "name": "Isha",
+    "arabicName": "العشاء",
+    "rakahs": 4,
+    "sajdahs": 8,
+    "sunnahBefore": 0,
+    "sunnahAfter": 2
+  }
+}
