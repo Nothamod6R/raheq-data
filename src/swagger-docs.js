@@ -408,6 +408,17 @@ const HIJRI_DATE_EXAMPLE = {
   formattedArabic: '3 ربيع الأول 1448 هـ'
 };
 
+const PRAYER_METADATA_EXAMPLE = {
+  data: {
+    name: 'Asr',
+    arabicName: 'العصر',
+    rakahs: 4,
+    sajdahs: 8,
+    sunnahBefore: [0, 4],
+    sunnahAfter: 0
+  }
+};
+
 const operations = {
   '/api/athkar': {
     get: {
