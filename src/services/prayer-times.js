@@ -378,11 +378,17 @@ const ummAlQuraHijriMonth = ({ year, month, day }) => {
 const isRamadan = (date) => ummAlQuraHijriMonth(date) === 9;
 const pad2 = (n) => (n < 10 ? `0${n}` : `${n}`);
 
-export const formatMinutes = (minutes) => {
+export const formatMinutes = (minutes, hours12 = false) => {
     if (minutes === null || minutes === undefined) return null;
     const total = Math.round(minutes);
     const hour = ((Math.floor(total / 60) % 24) + 24) % 24;
     const minute = ((total % 60) + 60) % 60;
 
-    return `${pad2(hour)}:${pad2(minute)}`;
+    if (!hours12) {
+        return `${pad2(hour)}:${pad2(minute)}`;
+    }
+
+    const period = hour >= 12 ? 'PM' : 'AM';
+    const hour12 = hour % 12 === 0 ? 12 : hour % 12;
+    return `${pad2(hour12)}:${pad2(minute)} ${period}`;
 };

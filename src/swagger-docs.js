@@ -284,14 +284,14 @@ export const responseSchemas = {
       },
       times: {
         type: 'object',
-        description: 'The five daily prayers plus sunrise, formatted as HH:MM local time.',
+        description: 'The five daily prayers plus sunrise, formatted as local time. Uses 24-hour "HH:MM" format by default, or 12-hour "hh:MM AM/PM" format when the `hours_12` query parameter is true.',
         properties: {
-          fajr: { type: 'string', description: 'Dawn prayer time (HH:MM).' },
-          sunrise: { type: 'string', description: 'Sunrise time (HH:MM).' },
-          dhuhr: { type: 'string', description: 'Noon prayer time (HH:MM).' },
-          asr: { type: 'string', description: 'Afternoon prayer time (HH:MM).' },
-          maghrib: { type: 'string', description: 'Sunset prayer time (HH:MM).' },
-          isha: { type: 'string', description: 'Night prayer time (HH:MM).' }
+          fajr: { type: 'string', description: 'Dawn prayer time (HH:MM, or hh:MM AM/PM when hours_12=true).' },
+          sunrise: { type: 'string', description: 'Sunrise time (HH:MM, or hh:MM AM/PM when hours_12=true).' },
+          dhuhr: { type: 'string', description: 'Noon prayer time (HH:MM, or hh:MM AM/PM when hours_12=true).' },
+          asr: { type: 'string', description: 'Afternoon prayer time (HH:MM, or hh:MM AM/PM when hours_12=true).' },
+          maghrib: { type: 'string', description: 'Sunset prayer time (HH:MM, or hh:MM AM/PM when hours_12=true).' },
+          isha: { type: 'string', description: 'Night prayer time (HH:MM, or hh:MM AM/PM when hours_12=true).' }
         },
         required: ['fajr', 'sunrise', 'dhuhr', 'asr', 'maghrib', 'isha']
       }
@@ -542,7 +542,8 @@ const operations = {
         queryParam('utcOffset', { type: 'number', minimum: -12, maximum: 14 }, 'UTC offset in hours for the location (fractional offsets such as 5.5 are supported).', true),
         queryParam('method', { type: 'string', enum: ['muslim_world_league', 'north_america', 'egyptian', 'umm_al_qura', 'karachi', 'gulf_region', 'kuwait', 'qatar', 'singapore', 'france', 'turkey', 'russia', 'moonsighting_committee', 'dubai', 'jakim', 'tunisia', 'algeria', 'indonesia', 'morocco'] }, 'Calculation method. Must be one of the supported methods.', true),
         queryParam('madhab', { type: 'string', enum: ['shafi', 'hanafi'] }, 'Asr madhab calculation.', true),
-        queryParam('date', { type: 'string', format: 'date' }, 'Date in YYYY-MM-DD format. Defaults to the current local date computed from `utcOffset`.', false)
+        queryParam('date', { type: 'string', format: 'date' }, 'Date in YYYY-MM-DD format. Defaults to the current local date computed from `utcOffset`.', false),
+        queryParam('hours_12', { type: 'boolean', default: false }, 'When true, formats the returned prayer times in 12-hour format with an AM/PM suffix (e.g. "05:30 AM") instead of 24-hour format. Defaults to false.', false)
       ],
       responses: {
         200: json({ $ref: '#/components/schemas/PrayerTimes' }, PRAYER_TIMES_EXAMPLE),

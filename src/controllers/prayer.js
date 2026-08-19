@@ -17,6 +17,15 @@ const toNumber = (value) => {
 
 const inRange = (value, { min, max }) => value >= min && value <= max;
 
+const toBoolean = (value, defaultValue = false) => {
+    if (value === undefined || value === null || value === '') return defaultValue;
+    if (typeof value === 'boolean') return value;
+    const normalized = value.toString().trim().toLowerCase();
+    if (['true', '1', 'yes'].includes(normalized)) return true;
+    if (['false', '0', 'no'].includes(normalized)) return false;
+    return defaultValue;
+};
+
 const isValidDate = (dateString) => {
     const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dateString);
     if (!match) return false;
@@ -70,7 +79,9 @@ const parseAndValidate = (query) => {
         return { error: 'Invalid date' };
     }
 
-    return { latitude, longitude, utcOffset, method, madhab, date };
+    const hours12 = toBoolean(query.hours_12, false);
+
+    return { latitude, longitude, utcOffset, method, madhab, date, hours12 };
 };
 
 export const getPrayerTimes = async (request, reply) => {
@@ -103,12 +114,12 @@ export const getPrayerTimes = async (request, reply) => {
             madhab: parsed.madhab
         },
         times: {
-            fajr: formatMinutes(times.fajr),
-            sunrise: formatMinutes(times.sunrise),
-            dhuhr: formatMinutes(times.dhuhr),
-            asr: formatMinutes(times.asr),
-            maghrib: formatMinutes(times.maghrib),
-            isha: formatMinutes(times.isha)
+            fajr: formatMinutes(times.fajr, parsed.hours12),
+            sunrise: formatMinutes(times.sunrise, parsed.hours12),
+            dhuhr: formatMinutes(times.dhuhr, parsed.hours12),
+            asr: formatMinutes(times.asr, parsed.hours12),
+            maghrib: formatMinutes(times.maghrib, parsed.hours12),
+            isha: formatMinutes(times.isha, parsed.hours12)
         }
     });
 };
