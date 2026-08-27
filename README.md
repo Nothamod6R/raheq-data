@@ -454,7 +454,52 @@ curl "http://localhost:3000/api/quran/metadata/surahs?number=2"
 
 ---
 
+<<<<<<< HEAD
 ## طرق حساب أوقات الصلاة (Calculation Methods)
+=======
+### (و) تخطيط المصحف (Mushaf Layout)
+
+- **GET** `/api/quran/layout/page/:page`
+- Path parameter:
+  - `page` (مطلوب): رقم الصفحة من 1 إلى 604.
+
+يعيد هذا الـ Endpoint **تخطيط صفحة المصحف الكاملة** بصيغة **صفحة ← سطر ← كلمة**
+دون الحاجة لتخمين فواصل الأسطر من جهة الواجهة. البيانات مصدرها
+`database/quran/text/layout/normalized/` (مجموعة `zonetecde/mushaf-layout`
+المستوردة بتثبيت commit رقم `72116ce4` — انظر `database/quran/text/layout/README.md`).
+
+تتكون الاستجابة من كائن بصيغة:
+
+```json
+{
+  "page": 3,
+  "lines": [
+    { "line": 1, "type": "text", "verseRange": { "start": { "surah": 2, "verse": 6 }, "end": { "surah": 2, "verse": 6 } },
+      "words": [
+        { "location": "2:6:1", "surah": 2, "verse": 6, "word": 1, "text": "إِنَّ",
+          "endOfVerse": false, "glyphs": { "qpc1": "ﭑ", "qpc2": "ﱁ" } }
+      ] }
+  ]
+}
+```
+
+- كل سطر له `type`: `surah-header` (رأس سورة)، `basmala`، أو `text`.
+- كل كلمة تحمل `location` بصيغة `surah:verse:wordIndex` لربطها ببيانات القرآن
+  الموجودة بالفعل (`surah:verse` → `/api/quran/text/...`) دون الحاجة إلى فهرس
+  مصفوفة غير مستقر.
+- رموز QPC تأتي من المصدر، وهي **منفصلة** عن `qcfData` (المرجع في
+  `database/quran/text/quran.json`). القطع/التوافق موضّح في ملف README الخاص
+  بالمجموعة.
+
+مثال:
+```bash
+curl "http://localhost:3000/api/quran/layout/page/1"
+```
+
+---
+
+## 8) أوقات الصلاة (Prayer Times)
+>>>>>>> 0dfcd93 (Add quran QCF page layout from (https://github.com/zonetecde/mushaf-layout) repo)
 
 | الطريقة                   | Fajr | Isha |
 |---------------------------|------|------|

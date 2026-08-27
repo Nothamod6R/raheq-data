@@ -1,0 +1,1596 @@
+{
+  "page": 583,
+  "lines": [
+    {
+      "line": 1,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 78,
+          "verse": 31
+        },
+        "end": {
+          "surah": 78,
+          "verse": 34
+        }
+      },
+      "text": "إِنَّ لِلْمُتَّقِينَ مَفَازًا ٣١ حَدَآئِقَ وَأَعْنَـٰبًۭا ٣٢ وَكَوَاعِبَ أَتْرَابًۭا ٣٣ وَكَأْسًۭا",
+      "words": [
+        {
+          "location": "78:31:1",
+          "surah": 78,
+          "verse": 31,
+          "word": 1,
+          "text": "إِنَّ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭑ",
+            "qpc2": "ﱁ"
+          }
+        },
+        {
+          "location": "78:31:2",
+          "surah": 78,
+          "verse": 31,
+          "word": 2,
+          "text": "لِلْمُتَّقِينَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭒ",
+            "qpc2": "ﱂ"
+          }
+        },
+        {
+          "location": "78:31:3",
+          "surah": 78,
+          "verse": 31,
+          "word": 3,
+          "text": "مَفَازًا",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﭓ ﭔ",
+            "qpc2": "ﱃ ﱄ"
+          }
+        },
+        {
+          "location": "78:32:1",
+          "surah": 78,
+          "verse": 32,
+          "word": 1,
+          "text": "حَدَآئِقَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭕ",
+            "qpc2": "ﱅ"
+          }
+        },
+        {
+          "location": "78:32:2",
+          "surah": 78,
+          "verse": 32,
+          "word": 2,
+          "text": "وَأَعْنَـٰبًۭا",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﭖ ﭗ",
+            "qpc2": "ﱆ ﱇ"
+          }
+        },
+        {
+          "location": "78:33:1",
+          "surah": 78,
+          "verse": 33,
+          "word": 1,
+          "text": "وَكَوَاعِبَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭘ",
+            "qpc2": "ﱈ"
+          }
+        },
+        {
+          "location": "78:33:2",
+          "surah": 78,
+          "verse": 33,
+          "word": 2,
+          "text": "أَتْرَابًۭا",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﭙ ﭚ",
+            "qpc2": "ﱉ ﱊ"
+          }
+        },
+        {
+          "location": "78:34:1",
+          "surah": 78,
+          "verse": 34,
+          "word": 1,
+          "text": "وَكَأْسًۭا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭛ",
+            "qpc2": "ﱋ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 78,
+          "verse": 34
+        },
+        "end": {
+          "surah": 78,
+          "verse": 36
+        }
+      },
+      "text": "دِهَاقًۭا ٣٤ لَّا يَسْمَعُونَ فِيهَا لَغْوًۭا وَلَا كِذَّٰبًۭا ٣٥ جَزَآءًۭ مِّن رَّبِّكَ عَطَآءً",
+      "words": [
+        {
+          "location": "78:34:2",
+          "surah": 78,
+          "verse": 34,
+          "word": 2,
+          "text": "دِهَاقًۭا",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﭜ ﭝ",
+            "qpc2": "ﱌ ﱍ"
+          }
+        },
+        {
+          "location": "78:35:1",
+          "surah": 78,
+          "verse": 35,
+          "word": 1,
+          "text": "لَّا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭞ",
+            "qpc2": "ﱎ"
+          }
+        },
+        {
+          "location": "78:35:2",
+          "surah": 78,
+          "verse": 35,
+          "word": 2,
+          "text": "يَسْمَعُونَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭟ",
+            "qpc2": "ﱏ"
+          }
+        },
+        {
+          "location": "78:35:3",
+          "surah": 78,
+          "verse": 35,
+          "word": 3,
+          "text": "فِيهَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭠ",
+            "qpc2": "ﱐ"
+          }
+        },
+        {
+          "location": "78:35:4",
+          "surah": 78,
+          "verse": 35,
+          "word": 4,
+          "text": "لَغْوًۭا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭡ",
+            "qpc2": "ﱑ"
+          }
+        },
+        {
+          "location": "78:35:5",
+          "surah": 78,
+          "verse": 35,
+          "word": 5,
+          "text": "وَلَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭢ",
+            "qpc2": "ﱒ"
+          }
+        },
+        {
+          "location": "78:35:6",
+          "surah": 78,
+          "verse": 35,
+          "word": 6,
+          "text": "كِذَّٰبًۭا",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﭣ ﭤ",
+            "qpc2": "ﱓ ﱔ"
+          }
+        },
+        {
+          "location": "78:36:1",
+          "surah": 78,
+          "verse": 36,
+          "word": 1,
+          "text": "جَزَآءًۭ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭥ",
+            "qpc2": "ﱕ"
+          }
+        },
+        {
+          "location": "78:36:2",
+          "surah": 78,
+          "verse": 36,
+          "word": 2,
+          "text": "مِّن",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭦ",
+            "qpc2": "ﱖ"
+          }
+        },
+        {
+          "location": "78:36:3",
+          "surah": 78,
+          "verse": 36,
+          "word": 3,
+          "text": "رَّبِّكَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭧ",
+            "qpc2": "ﱗ"
+          }
+        },
+        {
+          "location": "78:36:4",
+          "surah": 78,
+          "verse": 36,
+          "word": 4,
+          "text": "عَطَآءً",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭨ",
+            "qpc2": "ﱘ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 78,
+          "verse": 36
+        },
+        "end": {
+          "surah": 78,
+          "verse": 37
+        }
+      },
+      "text": "حِسَابًۭا ٣٦ رَّبِّ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَمَا بَيْنَهُمَا ٱلرَّحْمَـٰنِ ۖ لَا يَمْلِكُونَ",
+      "words": [
+        {
+          "location": "78:36:5",
+          "surah": 78,
+          "verse": 36,
+          "word": 5,
+          "text": "حِسَابًۭا",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﭩ ﭪ",
+            "qpc2": "ﱙ ﱚ"
+          }
+        },
+        {
+          "location": "78:37:1",
+          "surah": 78,
+          "verse": 37,
+          "word": 1,
+          "text": "رَّبِّ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭫ",
+            "qpc2": "ﱛ"
+          }
+        },
+        {
+          "location": "78:37:2",
+          "surah": 78,
+          "verse": 37,
+          "word": 2,
+          "text": "ٱلسَّمَـٰوَٰتِ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭬ",
+            "qpc2": "ﱜ"
+          }
+        },
+        {
+          "location": "78:37:3",
+          "surah": 78,
+          "verse": 37,
+          "word": 3,
+          "text": "وَٱلْأَرْضِ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭭ",
+            "qpc2": "ﱝ"
+          }
+        },
+        {
+          "location": "78:37:4",
+          "surah": 78,
+          "verse": 37,
+          "word": 4,
+          "text": "وَمَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭮ",
+            "qpc2": "ﱞ"
+          }
+        },
+        {
+          "location": "78:37:5",
+          "surah": 78,
+          "verse": 37,
+          "word": 5,
+          "text": "بَيْنَهُمَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭯ",
+            "qpc2": "ﱟ"
+          }
+        },
+        {
+          "location": "78:37:6",
+          "surah": 78,
+          "verse": 37,
+          "word": 6,
+          "text": "ٱلرَّحْمَـٰنِ ۖ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭰﭱ",
+            "qpc2": "ﱠﱡ"
+          }
+        },
+        {
+          "location": "78:37:7",
+          "surah": 78,
+          "verse": 37,
+          "word": 7,
+          "text": "لَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭲ",
+            "qpc2": "ﱢ"
+          }
+        },
+        {
+          "location": "78:37:8",
+          "surah": 78,
+          "verse": 37,
+          "word": 8,
+          "text": "يَمْلِكُونَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭳ",
+            "qpc2": "ﱣ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 4,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 78,
+          "verse": 37
+        },
+        "end": {
+          "surah": 78,
+          "verse": 38
+        }
+      },
+      "text": "مِنْهُ خِطَابًۭا ٣٧ يَوْمَ يَقُومُ ٱلرُّوحُ وَٱلْمَلَـٰٓئِكَةُ صَفًّۭا ۖ لَّا يَتَكَلَّمُونَ",
+      "words": [
+        {
+          "location": "78:37:9",
+          "surah": 78,
+          "verse": 37,
+          "word": 9,
+          "text": "مِنْهُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭴ",
+            "qpc2": "ﱤ"
+          }
+        },
+        {
+          "location": "78:37:10",
+          "surah": 78,
+          "verse": 37,
+          "word": 10,
+          "text": "خِطَابًۭا",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﭵ ﭶ",
+            "qpc2": "ﱥ ﱦ"
+          }
+        },
+        {
+          "location": "78:38:1",
+          "surah": 78,
+          "verse": 38,
+          "word": 1,
+          "text": "يَوْمَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭷ",
+            "qpc2": "ﱧ"
+          }
+        },
+        {
+          "location": "78:38:2",
+          "surah": 78,
+          "verse": 38,
+          "word": 2,
+          "text": "يَقُومُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭸ",
+            "qpc2": "ﱨ"
+          }
+        },
+        {
+          "location": "78:38:3",
+          "surah": 78,
+          "verse": 38,
+          "word": 3,
+          "text": "ٱلرُّوحُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭹ",
+            "qpc2": "ﱩ"
+          }
+        },
+        {
+          "location": "78:38:4",
+          "surah": 78,
+          "verse": 38,
+          "word": 4,
+          "text": "وَٱلْمَلَـٰٓئِكَةُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭺ",
+            "qpc2": "ﱪ"
+          }
+        },
+        {
+          "location": "78:38:5",
+          "surah": 78,
+          "verse": 38,
+          "word": 5,
+          "text": "صَفًّۭا ۖ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭻﭼ",
+            "qpc2": "ﱫﱬ"
+          }
+        },
+        {
+          "location": "78:38:6",
+          "surah": 78,
+          "verse": 38,
+          "word": 6,
+          "text": "لَّا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭽ",
+            "qpc2": "ﱭ"
+          }
+        },
+        {
+          "location": "78:38:7",
+          "surah": 78,
+          "verse": 38,
+          "word": 7,
+          "text": "يَتَكَلَّمُونَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭾ",
+            "qpc2": "ﱮ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 5,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 78,
+          "verse": 38
+        },
+        "end": {
+          "surah": 78,
+          "verse": 39
+        }
+      },
+      "text": "إِلَّا مَنْ أَذِنَ لَهُ ٱلرَّحْمَـٰنُ وَقَالَ صَوَابًۭا ٣٨ ذَٰلِكَ ٱلْيَوْمُ ٱلْحَقُّ ۖ فَمَن",
+      "words": [
+        {
+          "location": "78:38:8",
+          "surah": 78,
+          "verse": 38,
+          "word": 8,
+          "text": "إِلَّا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭿ",
+            "qpc2": "ﱯ"
+          }
+        },
+        {
+          "location": "78:38:9",
+          "surah": 78,
+          "verse": 38,
+          "word": 9,
+          "text": "مَنْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮀ",
+            "qpc2": "ﱰ"
+          }
+        },
+        {
+          "location": "78:38:10",
+          "surah": 78,
+          "verse": 38,
+          "word": 10,
+          "text": "أَذِنَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮁ",
+            "qpc2": "ﱱ"
+          }
+        },
+        {
+          "location": "78:38:11",
+          "surah": 78,
+          "verse": 38,
+          "word": 11,
+          "text": "لَهُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮂ",
+            "qpc2": "ﱲ"
+          }
+        },
+        {
+          "location": "78:38:12",
+          "surah": 78,
+          "verse": 38,
+          "word": 12,
+          "text": "ٱلرَّحْمَـٰنُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮃ",
+            "qpc2": "ﱳ"
+          }
+        },
+        {
+          "location": "78:38:13",
+          "surah": 78,
+          "verse": 38,
+          "word": 13,
+          "text": "وَقَالَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮄ",
+            "qpc2": "ﱴ"
+          }
+        },
+        {
+          "location": "78:38:14",
+          "surah": 78,
+          "verse": 38,
+          "word": 14,
+          "text": "صَوَابًۭا",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﮅ ﮆ",
+            "qpc2": "ﱵ ﱶ"
+          }
+        },
+        {
+          "location": "78:39:1",
+          "surah": 78,
+          "verse": 39,
+          "word": 1,
+          "text": "ذَٰلِكَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮇ",
+            "qpc2": "ﱷ"
+          }
+        },
+        {
+          "location": "78:39:2",
+          "surah": 78,
+          "verse": 39,
+          "word": 2,
+          "text": "ٱلْيَوْمُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮈ",
+            "qpc2": "ﱸ"
+          }
+        },
+        {
+          "location": "78:39:3",
+          "surah": 78,
+          "verse": 39,
+          "word": 3,
+          "text": "ٱلْحَقُّ ۖ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮉﮊ",
+            "qpc2": "ﱹﱺ"
+          }
+        },
+        {
+          "location": "78:39:4",
+          "surah": 78,
+          "verse": 39,
+          "word": 4,
+          "text": "فَمَن",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮋ",
+            "qpc2": "ﱻ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 6,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 78,
+          "verse": 39
+        },
+        "end": {
+          "surah": 78,
+          "verse": 40
+        }
+      },
+      "text": "شَآءَ ٱتَّخَذَ إِلَىٰ رَبِّهِۦ مَـَٔابًا ٣٩ إِنَّآ أَنذَرْنَـٰكُمْ عَذَابًۭا قَرِيبًۭا يَوْمَ",
+      "words": [
+        {
+          "location": "78:39:5",
+          "surah": 78,
+          "verse": 39,
+          "word": 5,
+          "text": "شَآءَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮌ",
+            "qpc2": "ﱼ"
+          }
+        },
+        {
+          "location": "78:39:6",
+          "surah": 78,
+          "verse": 39,
+          "word": 6,
+          "text": "ٱتَّخَذَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮍ",
+            "qpc2": "ﱽ"
+          }
+        },
+        {
+          "location": "78:39:7",
+          "surah": 78,
+          "verse": 39,
+          "word": 7,
+          "text": "إِلَىٰ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮎ",
+            "qpc2": "ﱾ"
+          }
+        },
+        {
+          "location": "78:39:8",
+          "surah": 78,
+          "verse": 39,
+          "word": 8,
+          "text": "رَبِّهِۦ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮏ",
+            "qpc2": "ﱿ"
+          }
+        },
+        {
+          "location": "78:39:9",
+          "surah": 78,
+          "verse": 39,
+          "word": 9,
+          "text": "مَـَٔابًا",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﮐ ﮑ",
+            "qpc2": "ﲀ ﲁ"
+          }
+        },
+        {
+          "location": "78:40:1",
+          "surah": 78,
+          "verse": 40,
+          "word": 1,
+          "text": "إِنَّآ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮒ",
+            "qpc2": "ﲂ"
+          }
+        },
+        {
+          "location": "78:40:2",
+          "surah": 78,
+          "verse": 40,
+          "word": 2,
+          "text": "أَنذَرْنَـٰكُمْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮓ",
+            "qpc2": "ﲃ"
+          }
+        },
+        {
+          "location": "78:40:3",
+          "surah": 78,
+          "verse": 40,
+          "word": 3,
+          "text": "عَذَابًۭا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮔ",
+            "qpc2": "ﲄ"
+          }
+        },
+        {
+          "location": "78:40:4",
+          "surah": 78,
+          "verse": 40,
+          "word": 4,
+          "text": "قَرِيبًۭا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮕ",
+            "qpc2": "ﲅ"
+          }
+        },
+        {
+          "location": "78:40:5",
+          "surah": 78,
+          "verse": 40,
+          "word": 5,
+          "text": "يَوْمَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮖ",
+            "qpc2": "ﲆ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 7,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 78,
+          "verse": 40
+        },
+        "end": {
+          "surah": 78,
+          "verse": 40
+        }
+      },
+      "text": "يَنظُرُ ٱلْمَرْءُ مَا قَدَّمَتْ يَدَاهُ وَيَقُولُ ٱلْكَافِرُ يَـٰلَيْتَنِى كُنتُ تُرَٰبًۢا ٤٠",
+      "words": [
+        {
+          "location": "78:40:6",
+          "surah": 78,
+          "verse": 40,
+          "word": 6,
+          "text": "يَنظُرُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮗ",
+            "qpc2": "ﲇ"
+          }
+        },
+        {
+          "location": "78:40:7",
+          "surah": 78,
+          "verse": 40,
+          "word": 7,
+          "text": "ٱلْمَرْءُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮘ",
+            "qpc2": "ﲈ"
+          }
+        },
+        {
+          "location": "78:40:8",
+          "surah": 78,
+          "verse": 40,
+          "word": 8,
+          "text": "مَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮙ",
+            "qpc2": "ﲉ"
+          }
+        },
+        {
+          "location": "78:40:9",
+          "surah": 78,
+          "verse": 40,
+          "word": 9,
+          "text": "قَدَّمَتْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮚ",
+            "qpc2": "ﲊ"
+          }
+        },
+        {
+          "location": "78:40:10",
+          "surah": 78,
+          "verse": 40,
+          "word": 10,
+          "text": "يَدَاهُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮛ",
+            "qpc2": "ﲋ"
+          }
+        },
+        {
+          "location": "78:40:11",
+          "surah": 78,
+          "verse": 40,
+          "word": 11,
+          "text": "وَيَقُولُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮜ",
+            "qpc2": "ﲌ"
+          }
+        },
+        {
+          "location": "78:40:12",
+          "surah": 78,
+          "verse": 40,
+          "word": 12,
+          "text": "ٱلْكَافِرُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮝ",
+            "qpc2": "ﲍ"
+          }
+        },
+        {
+          "location": "78:40:13",
+          "surah": 78,
+          "verse": 40,
+          "word": 13,
+          "text": "يَـٰلَيْتَنِى",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮞ",
+            "qpc2": "ﲎ"
+          }
+        },
+        {
+          "location": "78:40:14",
+          "surah": 78,
+          "verse": 40,
+          "word": 14,
+          "text": "كُنتُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮟ",
+            "qpc2": "ﲏ"
+          }
+        },
+        {
+          "location": "78:40:15",
+          "surah": 78,
+          "verse": 40,
+          "word": 15,
+          "text": "تُرَٰبًۢا",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﮠ ﮡ",
+            "qpc2": "ﲐ ﲑ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 8,
+      "type": "surah-header",
+      "surah": 79,
+      "text": "سورة النازعات"
+    },
+    {
+      "line": 9,
+      "type": "basmala",
+      "glyphs": {
+        "qpc1": "#\"!",
+        "qpc2": "ﭑﭒﭓ"
+      }
+    },
+    {
+      "line": 10,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 79,
+          "verse": 1
+        },
+        "end": {
+          "surah": 79,
+          "verse": 3
+        }
+      },
+      "text": "وَٱلنَّـٰزِعَـٰتِ غَرْقًۭا ١ وَٱلنَّـٰشِطَـٰتِ نَشْطًۭا ٢ وَٱلسَّـٰبِحَـٰتِ سَبْحًۭا ٣",
+      "words": [
+        {
+          "location": "79:1:1",
+          "surah": 79,
+          "verse": 1,
+          "word": 1,
+          "text": "وَٱلنَّـٰزِعَـٰتِ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮢ",
+            "qpc2": "ﲒ"
+          }
+        },
+        {
+          "location": "79:1:2",
+          "surah": 79,
+          "verse": 1,
+          "word": 2,
+          "text": "غَرْقًۭا",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﮣ ﮤ",
+            "qpc2": "ﲓ ﲔ"
+          }
+        },
+        {
+          "location": "79:2:1",
+          "surah": 79,
+          "verse": 2,
+          "word": 1,
+          "text": "وَٱلنَّـٰشِطَـٰتِ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮥ",
+            "qpc2": "ﲕ"
+          }
+        },
+        {
+          "location": "79:2:2",
+          "surah": 79,
+          "verse": 2,
+          "word": 2,
+          "text": "نَشْطًۭا",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﮦ ﮧ",
+            "qpc2": "ﲖ ﲗ"
+          }
+        },
+        {
+          "location": "79:3:1",
+          "surah": 79,
+          "verse": 3,
+          "word": 1,
+          "text": "وَٱلسَّـٰبِحَـٰتِ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮨ",
+            "qpc2": "ﲘ"
+          }
+        },
+        {
+          "location": "79:3:2",
+          "surah": 79,
+          "verse": 3,
+          "word": 2,
+          "text": "سَبْحًۭا",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﮩ ﮪ",
+            "qpc2": "ﲙ ﲚ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 11,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 79,
+          "verse": 4
+        },
+        "end": {
+          "surah": 79,
+          "verse": 6
+        }
+      },
+      "text": "فَٱلسَّـٰبِقَـٰتِ سَبْقًۭا ٤ فَٱلْمُدَبِّرَٰتِ أَمْرًۭا ٥ يَوْمَ تَرْجُفُ ٱلرَّاجِفَةُ ٦",
+      "words": [
+        {
+          "location": "79:4:1",
+          "surah": 79,
+          "verse": 4,
+          "word": 1,
+          "text": "فَٱلسَّـٰبِقَـٰتِ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮫ",
+            "qpc2": "ﲛ"
+          }
+        },
+        {
+          "location": "79:4:2",
+          "surah": 79,
+          "verse": 4,
+          "word": 2,
+          "text": "سَبْقًۭا",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﮬ ﮭ",
+            "qpc2": "ﲜ ﲝ"
+          }
+        },
+        {
+          "location": "79:5:1",
+          "surah": 79,
+          "verse": 5,
+          "word": 1,
+          "text": "فَٱلْمُدَبِّرَٰتِ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮮ",
+            "qpc2": "ﲞ"
+          }
+        },
+        {
+          "location": "79:5:2",
+          "surah": 79,
+          "verse": 5,
+          "word": 2,
+          "text": "أَمْرًۭا",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﮯ ﮰ",
+            "qpc2": "ﲟ ﲠ"
+          }
+        },
+        {
+          "location": "79:6:1",
+          "surah": 79,
+          "verse": 6,
+          "word": 1,
+          "text": "يَوْمَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮱ",
+            "qpc2": "ﲡ"
+          }
+        },
+        {
+          "location": "79:6:2",
+          "surah": 79,
+          "verse": 6,
+          "word": 2,
+          "text": "تَرْجُفُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯓ",
+            "qpc2": "ﲢ"
+          }
+        },
+        {
+          "location": "79:6:3",
+          "surah": 79,
+          "verse": 6,
+          "word": 3,
+          "text": "ٱلرَّاجِفَةُ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﯔ ﯕ",
+            "qpc2": "ﲣ ﲤ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 12,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 79,
+          "verse": 7
+        },
+        "end": {
+          "surah": 79,
+          "verse": 9
+        }
+      },
+      "text": "تَتْبَعُهَا ٱلرَّادِفَةُ ٧ قُلُوبٌۭ يَوْمَئِذٍۢ وَاجِفَةٌ ٨ أَبْصَـٰرُهَا",
+      "words": [
+        {
+          "location": "79:7:1",
+          "surah": 79,
+          "verse": 7,
+          "word": 1,
+          "text": "تَتْبَعُهَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯖ",
+            "qpc2": "ﲥ"
+          }
+        },
+        {
+          "location": "79:7:2",
+          "surah": 79,
+          "verse": 7,
+          "word": 2,
+          "text": "ٱلرَّادِفَةُ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﯗ ﯘ",
+            "qpc2": "ﲦ ﲧ"
+          }
+        },
+        {
+          "location": "79:8:1",
+          "surah": 79,
+          "verse": 8,
+          "word": 1,
+          "text": "قُلُوبٌۭ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯙ",
+            "qpc2": "ﲨ"
+          }
+        },
+        {
+          "location": "79:8:2",
+          "surah": 79,
+          "verse": 8,
+          "word": 2,
+          "text": "يَوْمَئِذٍۢ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯚ",
+            "qpc2": "ﲩ"
+          }
+        },
+        {
+          "location": "79:8:3",
+          "surah": 79,
+          "verse": 8,
+          "word": 3,
+          "text": "وَاجِفَةٌ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﯛ ﯜ",
+            "qpc2": "ﲪ ﲫ"
+          }
+        },
+        {
+          "location": "79:9:1",
+          "surah": 79,
+          "verse": 9,
+          "word": 1,
+          "text": "أَبْصَـٰرُهَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯝ",
+            "qpc2": "ﲬ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 13,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 79,
+          "verse": 9
+        },
+        "end": {
+          "surah": 79,
+          "verse": 11
+        }
+      },
+      "text": "خَـٰشِعَةٌۭ ٩ يَقُولُونَ أَءِنَّا لَمَرْدُودُونَ فِى ٱلْحَافِرَةِ ١٠ أَءِذَا كُنَّا",
+      "words": [
+        {
+          "location": "79:9:2",
+          "surah": 79,
+          "verse": 9,
+          "word": 2,
+          "text": "خَـٰشِعَةٌۭ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﯞ ﯟ",
+            "qpc2": "ﲭ ﲮ"
+          }
+        },
+        {
+          "location": "79:10:1",
+          "surah": 79,
+          "verse": 10,
+          "word": 1,
+          "text": "يَقُولُونَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯠ",
+            "qpc2": "ﲯ"
+          }
+        },
+        {
+          "location": "79:10:2",
+          "surah": 79,
+          "verse": 10,
+          "word": 2,
+          "text": "أَءِنَّا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯡ",
+            "qpc2": "ﲰ"
+          }
+        },
+        {
+          "location": "79:10:3",
+          "surah": 79,
+          "verse": 10,
+          "word": 3,
+          "text": "لَمَرْدُودُونَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯢ",
+            "qpc2": "ﲱ"
+          }
+        },
+        {
+          "location": "79:10:4",
+          "surah": 79,
+          "verse": 10,
+          "word": 4,
+          "text": "فِى",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯣ",
+            "qpc2": "ﲲ"
+          }
+        },
+        {
+          "location": "79:10:5",
+          "surah": 79,
+          "verse": 10,
+          "word": 5,
+          "text": "ٱلْحَافِرَةِ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﯤ ﯥ",
+            "qpc2": "ﲳ ﲴ"
+          }
+        },
+        {
+          "location": "79:11:1",
+          "surah": 79,
+          "verse": 11,
+          "word": 1,
+          "text": "أَءِذَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯦ",
+            "qpc2": "ﲵ"
+          }
+        },
+        {
+          "location": "79:11:2",
+          "surah": 79,
+          "verse": 11,
+          "word": 2,
+          "text": "كُنَّا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯧ",
+            "qpc2": "ﲶ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 14,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 79,
+          "verse": 11
+        },
+        "end": {
+          "surah": 79,
+          "verse": 13
+        }
+      },
+      "text": "عِظَـٰمًۭا نَّخِرَةًۭ ١١ قَالُوا۟ تِلْكَ إِذًۭا كَرَّةٌ خَاسِرَةٌۭ ١٢ فَإِنَّمَا هِىَ زَجْرَةٌۭ",
+      "words": [
+        {
+          "location": "79:11:3",
+          "surah": 79,
+          "verse": 11,
+          "word": 3,
+          "text": "عِظَـٰمًۭا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯨ",
+            "qpc2": "ﲷ"
+          }
+        },
+        {
+          "location": "79:11:4",
+          "surah": 79,
+          "verse": 11,
+          "word": 4,
+          "text": "نَّخِرَةًۭ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﯩ ﯪ",
+            "qpc2": "ﲸ ﲹ"
+          }
+        },
+        {
+          "location": "79:12:1",
+          "surah": 79,
+          "verse": 12,
+          "word": 1,
+          "text": "قَالُوا۟",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯫ",
+            "qpc2": "ﲺ"
+          }
+        },
+        {
+          "location": "79:12:2",
+          "surah": 79,
+          "verse": 12,
+          "word": 2,
+          "text": "تِلْكَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯬ",
+            "qpc2": "ﲻ"
+          }
+        },
+        {
+          "location": "79:12:3",
+          "surah": 79,
+          "verse": 12,
+          "word": 3,
+          "text": "إِذًۭا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯭ",
+            "qpc2": "ﲼ"
+          }
+        },
+        {
+          "location": "79:12:4",
+          "surah": 79,
+          "verse": 12,
+          "word": 4,
+          "text": "كَرَّةٌ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯮ",
+            "qpc2": "ﲽ"
+          }
+        },
+        {
+          "location": "79:12:5",
+          "surah": 79,
+          "verse": 12,
+          "word": 5,
+          "text": "خَاسِرَةٌۭ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﯯ ﯰ",
+            "qpc2": "ﲾ ﲿ"
+          }
+        },
+        {
+          "location": "79:13:1",
+          "surah": 79,
+          "verse": 13,
+          "word": 1,
+          "text": "فَإِنَّمَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯱ",
+            "qpc2": "ﳀ"
+          }
+        },
+        {
+          "location": "79:13:2",
+          "surah": 79,
+          "verse": 13,
+          "word": 2,
+          "text": "هِىَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯲ",
+            "qpc2": "ﳁ"
+          }
+        },
+        {
+          "location": "79:13:3",
+          "surah": 79,
+          "verse": 13,
+          "word": 3,
+          "text": "زَجْرَةٌۭ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯳ",
+            "qpc2": "ﳂ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 15,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 79,
+          "verse": 13
+        },
+        "end": {
+          "surah": 79,
+          "verse": 15
+        }
+      },
+      "text": "وَٰحِدَةٌۭ ١٣ فَإِذَا هُم بِٱلسَّاهِرَةِ ١٤ هَلْ أَتَىٰكَ حَدِيثُ مُوسَىٰٓ ١٥",
+      "words": [
+        {
+          "location": "79:13:4",
+          "surah": 79,
+          "verse": 13,
+          "word": 4,
+          "text": "وَٰحِدَةٌۭ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﯴ ﯵ",
+            "qpc2": "ﳃ ﳄ"
+          }
+        },
+        {
+          "location": "79:14:1",
+          "surah": 79,
+          "verse": 14,
+          "word": 1,
+          "text": "فَإِذَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯶ",
+            "qpc2": "ﳅ"
+          }
+        },
+        {
+          "location": "79:14:2",
+          "surah": 79,
+          "verse": 14,
+          "word": 2,
+          "text": "هُم",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯷ",
+            "qpc2": "ﳆ"
+          }
+        },
+        {
+          "location": "79:14:3",
+          "surah": 79,
+          "verse": 14,
+          "word": 3,
+          "text": "بِٱلسَّاهِرَةِ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﯸ ﯹ",
+            "qpc2": "ﳇ ﳈ"
+          }
+        },
+        {
+          "location": "79:15:1",
+          "surah": 79,
+          "verse": 15,
+          "word": 1,
+          "text": "هَلْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯺ",
+            "qpc2": "ﳉ"
+          }
+        },
+        {
+          "location": "79:15:2",
+          "surah": 79,
+          "verse": 15,
+          "word": 2,
+          "text": "أَتَىٰكَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯻ",
+            "qpc2": "ﳊ"
+          }
+        },
+        {
+          "location": "79:15:3",
+          "surah": 79,
+          "verse": 15,
+          "word": 3,
+          "text": "حَدِيثُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯼ",
+            "qpc2": "ﳋ"
+          }
+        },
+        {
+          "location": "79:15:4",
+          "surah": 79,
+          "verse": 15,
+          "word": 4,
+          "text": "مُوسَىٰٓ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﯽ ﯾ",
+            "qpc2": "ﳌ ﳍ"
+          }
+        }
+      ]
+    }
+  ]
+}

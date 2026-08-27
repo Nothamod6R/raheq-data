@@ -18,7 +18,8 @@ import {
     getPageDataMetadata,
     getQuartersMetadata,
     getSajdahMetadata,
-    getSurahsMetadata
+    getSurahsMetadata,
+    getQuranLayoutPage
 } from './controllers/quran.js';
 import { getPrayerTimes } from './controllers/prayer.js';
 import { getPrayerMetadata } from "./services/prayer-metadata.js";
@@ -58,4 +59,6 @@ export const appRoutes = async (fastify, options) => {
     fastify.get('/api/quran/metadata/quarters', getQuartersMetadata);
     fastify.get('/api/quran/metadata/sajdah', getSajdahMetadata);
     fastify.get('/api/quran/metadata/surahs', getSurahsMetadata);
+
+    fastify.get('/api/quran/layout/page/:page', getQuranLayoutPage);
 };

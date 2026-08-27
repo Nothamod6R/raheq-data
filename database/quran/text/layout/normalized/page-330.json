@@ -1,0 +1,1568 @@
+{
+  "page": 330,
+  "lines": [
+    {
+      "line": 1,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 21,
+          "verse": 91
+        },
+        "end": {
+          "surah": 21,
+          "verse": 91
+        }
+      },
+      "text": "وَٱلَّتِىٓ أَحْصَنَتْ فَرْجَهَا فَنَفَخْنَا فِيهَا مِن رُّوحِنَا",
+      "words": [
+        {
+          "location": "21:91:1",
+          "surah": 21,
+          "verse": 91,
+          "word": 1,
+          "text": "وَٱلَّتِىٓ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭑ",
+            "qpc2": "ﱁ"
+          }
+        },
+        {
+          "location": "21:91:2",
+          "surah": 21,
+          "verse": 91,
+          "word": 2,
+          "text": "أَحْصَنَتْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭒ",
+            "qpc2": "ﱂ"
+          }
+        },
+        {
+          "location": "21:91:3",
+          "surah": 21,
+          "verse": 91,
+          "word": 3,
+          "text": "فَرْجَهَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭓ",
+            "qpc2": "ﱃ"
+          }
+        },
+        {
+          "location": "21:91:4",
+          "surah": 21,
+          "verse": 91,
+          "word": 4,
+          "text": "فَنَفَخْنَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭔ",
+            "qpc2": "ﱄ"
+          }
+        },
+        {
+          "location": "21:91:5",
+          "surah": 21,
+          "verse": 91,
+          "word": 5,
+          "text": "فِيهَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭕ",
+            "qpc2": "ﱅ"
+          }
+        },
+        {
+          "location": "21:91:6",
+          "surah": 21,
+          "verse": 91,
+          "word": 6,
+          "text": "مِن",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭖ",
+            "qpc2": "ﱆ"
+          }
+        },
+        {
+          "location": "21:91:7",
+          "surah": 21,
+          "verse": 91,
+          "word": 7,
+          "text": "رُّوحِنَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭗ",
+            "qpc2": "ﱇ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 21,
+          "verse": 91
+        },
+        "end": {
+          "surah": 21,
+          "verse": 92
+        }
+      },
+      "text": "وَجَعَلْنَـٰهَا وَٱبْنَهَآ ءَايَةًۭ لِّلْعَـٰلَمِينَ ٩١ إِنَّ هَـٰذِهِۦٓ",
+      "words": [
+        {
+          "location": "21:91:8",
+          "surah": 21,
+          "verse": 91,
+          "word": 8,
+          "text": "وَجَعَلْنَـٰهَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭘ",
+            "qpc2": "ﱈ"
+          }
+        },
+        {
+          "location": "21:91:9",
+          "surah": 21,
+          "verse": 91,
+          "word": 9,
+          "text": "وَٱبْنَهَآ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭙ",
+            "qpc2": "ﱉ"
+          }
+        },
+        {
+          "location": "21:91:10",
+          "surah": 21,
+          "verse": 91,
+          "word": 10,
+          "text": "ءَايَةًۭ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭚ",
+            "qpc2": "ﱊ"
+          }
+        },
+        {
+          "location": "21:91:11",
+          "surah": 21,
+          "verse": 91,
+          "word": 11,
+          "text": "لِّلْعَـٰلَمِينَ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﭛ ﭜ",
+            "qpc2": "ﱋ ﱌ"
+          }
+        },
+        {
+          "location": "21:92:1",
+          "surah": 21,
+          "verse": 92,
+          "word": 1,
+          "text": "إِنَّ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭝ",
+            "qpc2": "ﱍ"
+          }
+        },
+        {
+          "location": "21:92:2",
+          "surah": 21,
+          "verse": 92,
+          "word": 2,
+          "text": "هَـٰذِهِۦٓ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭞ",
+            "qpc2": "ﱎ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 21,
+          "verse": 92
+        },
+        "end": {
+          "surah": 21,
+          "verse": 92
+        }
+      },
+      "text": "أُمَّتُكُمْ أُمَّةًۭ وَٰحِدَةًۭ وَأَنَا۠ رَبُّكُمْ فَٱعْبُدُونِ ٩٢",
+      "words": [
+        {
+          "location": "21:92:3",
+          "surah": 21,
+          "verse": 92,
+          "word": 3,
+          "text": "أُمَّتُكُمْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭟ",
+            "qpc2": "ﱏ"
+          }
+        },
+        {
+          "location": "21:92:4",
+          "surah": 21,
+          "verse": 92,
+          "word": 4,
+          "text": "أُمَّةًۭ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭠ",
+            "qpc2": "ﱐ"
+          }
+        },
+        {
+          "location": "21:92:5",
+          "surah": 21,
+          "verse": 92,
+          "word": 5,
+          "text": "وَٰحِدَةًۭ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭡ",
+            "qpc2": "ﱑ"
+          }
+        },
+        {
+          "location": "21:92:6",
+          "surah": 21,
+          "verse": 92,
+          "word": 6,
+          "text": "وَأَنَا۠",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭢ",
+            "qpc2": "ﱒ"
+          }
+        },
+        {
+          "location": "21:92:7",
+          "surah": 21,
+          "verse": 92,
+          "word": 7,
+          "text": "رَبُّكُمْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭣ",
+            "qpc2": "ﱓ"
+          }
+        },
+        {
+          "location": "21:92:8",
+          "surah": 21,
+          "verse": 92,
+          "word": 8,
+          "text": "فَٱعْبُدُونِ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﭤ ﭥ",
+            "qpc2": "ﱔ ﱕ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 4,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 21,
+          "verse": 93
+        },
+        "end": {
+          "surah": 21,
+          "verse": 93
+        }
+      },
+      "text": "وَتَقَطَّعُوٓا۟ أَمْرَهُم بَيْنَهُمْ ۖ كُلٌّ إِلَيْنَا رَٰجِعُونَ ٩٣",
+      "words": [
+        {
+          "location": "21:93:1",
+          "surah": 21,
+          "verse": 93,
+          "word": 1,
+          "text": "وَتَقَطَّعُوٓا۟",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭦ",
+            "qpc2": "ﱖ"
+          }
+        },
+        {
+          "location": "21:93:2",
+          "surah": 21,
+          "verse": 93,
+          "word": 2,
+          "text": "أَمْرَهُم",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭧ",
+            "qpc2": "ﱗ"
+          }
+        },
+        {
+          "location": "21:93:3",
+          "surah": 21,
+          "verse": 93,
+          "word": 3,
+          "text": "بَيْنَهُمْ ۖ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭨﭩ",
+            "qpc2": "ﱘﱙ"
+          }
+        },
+        {
+          "location": "21:93:4",
+          "surah": 21,
+          "verse": 93,
+          "word": 4,
+          "text": "كُلٌّ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭪ",
+            "qpc2": "ﱚ"
+          }
+        },
+        {
+          "location": "21:93:5",
+          "surah": 21,
+          "verse": 93,
+          "word": 5,
+          "text": "إِلَيْنَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭫ",
+            "qpc2": "ﱛ"
+          }
+        },
+        {
+          "location": "21:93:6",
+          "surah": 21,
+          "verse": 93,
+          "word": 6,
+          "text": "رَٰجِعُونَ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﭬ ﭭ",
+            "qpc2": "ﱜ ﱝ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 5,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 21,
+          "verse": 94
+        },
+        "end": {
+          "surah": 21,
+          "verse": 94
+        }
+      },
+      "text": "فَمَن يَعْمَلْ مِنَ ٱلصَّـٰلِحَـٰتِ وَهُوَ مُؤْمِنٌۭ فَلَا كُفْرَانَ",
+      "words": [
+        {
+          "location": "21:94:1",
+          "surah": 21,
+          "verse": 94,
+          "word": 1,
+          "text": "فَمَن",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭮ",
+            "qpc2": "ﱞ"
+          }
+        },
+        {
+          "location": "21:94:2",
+          "surah": 21,
+          "verse": 94,
+          "word": 2,
+          "text": "يَعْمَلْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭯ",
+            "qpc2": "ﱟ"
+          }
+        },
+        {
+          "location": "21:94:3",
+          "surah": 21,
+          "verse": 94,
+          "word": 3,
+          "text": "مِنَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭰ",
+            "qpc2": "ﱠ"
+          }
+        },
+        {
+          "location": "21:94:4",
+          "surah": 21,
+          "verse": 94,
+          "word": 4,
+          "text": "ٱلصَّـٰلِحَـٰتِ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭱ",
+            "qpc2": "ﱡ"
+          }
+        },
+        {
+          "location": "21:94:5",
+          "surah": 21,
+          "verse": 94,
+          "word": 5,
+          "text": "وَهُوَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭲ",
+            "qpc2": "ﱢ"
+          }
+        },
+        {
+          "location": "21:94:6",
+          "surah": 21,
+          "verse": 94,
+          "word": 6,
+          "text": "مُؤْمِنٌۭ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭳ",
+            "qpc2": "ﱣ"
+          }
+        },
+        {
+          "location": "21:94:7",
+          "surah": 21,
+          "verse": 94,
+          "word": 7,
+          "text": "فَلَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭴ",
+            "qpc2": "ﱤ"
+          }
+        },
+        {
+          "location": "21:94:8",
+          "surah": 21,
+          "verse": 94,
+          "word": 8,
+          "text": "كُفْرَانَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭵ",
+            "qpc2": "ﱥ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 6,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 21,
+          "verse": 94
+        },
+        "end": {
+          "surah": 21,
+          "verse": 95
+        }
+      },
+      "text": "لِسَعْيِهِۦ وَإِنَّا لَهُۥ كَـٰتِبُونَ ٩٤ وَحَرَٰمٌ عَلَىٰ قَرْيَةٍ",
+      "words": [
+        {
+          "location": "21:94:9",
+          "surah": 21,
+          "verse": 94,
+          "word": 9,
+          "text": "لِسَعْيِهِۦ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭶ",
+            "qpc2": "ﱦ"
+          }
+        },
+        {
+          "location": "21:94:10",
+          "surah": 21,
+          "verse": 94,
+          "word": 10,
+          "text": "وَإِنَّا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭷ",
+            "qpc2": "ﱧ"
+          }
+        },
+        {
+          "location": "21:94:11",
+          "surah": 21,
+          "verse": 94,
+          "word": 11,
+          "text": "لَهُۥ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭸ",
+            "qpc2": "ﱨ"
+          }
+        },
+        {
+          "location": "21:94:12",
+          "surah": 21,
+          "verse": 94,
+          "word": 12,
+          "text": "كَـٰتِبُونَ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﭹ ﭺ",
+            "qpc2": "ﱩ ﱪ"
+          }
+        },
+        {
+          "location": "21:95:1",
+          "surah": 21,
+          "verse": 95,
+          "word": 1,
+          "text": "وَحَرَٰمٌ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭻ",
+            "qpc2": "ﱫ"
+          }
+        },
+        {
+          "location": "21:95:2",
+          "surah": 21,
+          "verse": 95,
+          "word": 2,
+          "text": "عَلَىٰ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭼ",
+            "qpc2": "ﱬ"
+          }
+        },
+        {
+          "location": "21:95:3",
+          "surah": 21,
+          "verse": 95,
+          "word": 3,
+          "text": "قَرْيَةٍ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭽ",
+            "qpc2": "ﱭ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 7,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 21,
+          "verse": 95
+        },
+        "end": {
+          "surah": 21,
+          "verse": 96
+        }
+      },
+      "text": "أَهْلَكْنَـٰهَآ أَنَّهُمْ لَا يَرْجِعُونَ ٩٥ حَتَّىٰٓ إِذَا فُتِحَتْ",
+      "words": [
+        {
+          "location": "21:95:4",
+          "surah": 21,
+          "verse": 95,
+          "word": 4,
+          "text": "أَهْلَكْنَـٰهَآ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭾ",
+            "qpc2": "ﱮ"
+          }
+        },
+        {
+          "location": "21:95:5",
+          "surah": 21,
+          "verse": 95,
+          "word": 5,
+          "text": "أَنَّهُمْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﭿ",
+            "qpc2": "ﱯ"
+          }
+        },
+        {
+          "location": "21:95:6",
+          "surah": 21,
+          "verse": 95,
+          "word": 6,
+          "text": "لَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮀ",
+            "qpc2": "ﱰ"
+          }
+        },
+        {
+          "location": "21:95:7",
+          "surah": 21,
+          "verse": 95,
+          "word": 7,
+          "text": "يَرْجِعُونَ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﮁ ﮂ",
+            "qpc2": "ﱱ ﱲ"
+          }
+        },
+        {
+          "location": "21:96:1",
+          "surah": 21,
+          "verse": 96,
+          "word": 1,
+          "text": "حَتَّىٰٓ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮃ",
+            "qpc2": "ﱳ"
+          }
+        },
+        {
+          "location": "21:96:2",
+          "surah": 21,
+          "verse": 96,
+          "word": 2,
+          "text": "إِذَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮄ",
+            "qpc2": "ﱴ"
+          }
+        },
+        {
+          "location": "21:96:3",
+          "surah": 21,
+          "verse": 96,
+          "word": 3,
+          "text": "فُتِحَتْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮅ",
+            "qpc2": "ﱵ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 8,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 21,
+          "verse": 96
+        },
+        "end": {
+          "surah": 21,
+          "verse": 96
+        }
+      },
+      "text": "يَأْجُوجُ وَمَأْجُوجُ وَهُم مِّن كُلِّ حَدَبٍۢ يَنسِلُونَ ٩٦",
+      "words": [
+        {
+          "location": "21:96:4",
+          "surah": 21,
+          "verse": 96,
+          "word": 4,
+          "text": "يَأْجُوجُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮆ",
+            "qpc2": "ﱶ"
+          }
+        },
+        {
+          "location": "21:96:5",
+          "surah": 21,
+          "verse": 96,
+          "word": 5,
+          "text": "وَمَأْجُوجُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮇ",
+            "qpc2": "ﱷ"
+          }
+        },
+        {
+          "location": "21:96:6",
+          "surah": 21,
+          "verse": 96,
+          "word": 6,
+          "text": "وَهُم",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮈ",
+            "qpc2": "ﱸ"
+          }
+        },
+        {
+          "location": "21:96:7",
+          "surah": 21,
+          "verse": 96,
+          "word": 7,
+          "text": "مِّن",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮉ",
+            "qpc2": "ﱹ"
+          }
+        },
+        {
+          "location": "21:96:8",
+          "surah": 21,
+          "verse": 96,
+          "word": 8,
+          "text": "كُلِّ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮊ",
+            "qpc2": "ﱺ"
+          }
+        },
+        {
+          "location": "21:96:9",
+          "surah": 21,
+          "verse": 96,
+          "word": 9,
+          "text": "حَدَبٍۢ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮋ",
+            "qpc2": "ﱻ"
+          }
+        },
+        {
+          "location": "21:96:10",
+          "surah": 21,
+          "verse": 96,
+          "word": 10,
+          "text": "يَنسِلُونَ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﮌ ﮍ",
+            "qpc2": "ﱼ ﱽ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 9,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 21,
+          "verse": 97
+        },
+        "end": {
+          "surah": 21,
+          "verse": 97
+        }
+      },
+      "text": "وَٱقْتَرَبَ ٱلْوَعْدُ ٱلْحَقُّ فَإِذَا هِىَ شَـٰخِصَةٌ أَبْصَـٰرُ ٱلَّذِينَ",
+      "words": [
+        {
+          "location": "21:97:1",
+          "surah": 21,
+          "verse": 97,
+          "word": 1,
+          "text": "وَٱقْتَرَبَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮎ",
+            "qpc2": "ﱾ"
+          }
+        },
+        {
+          "location": "21:97:2",
+          "surah": 21,
+          "verse": 97,
+          "word": 2,
+          "text": "ٱلْوَعْدُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮏ",
+            "qpc2": "ﱿ"
+          }
+        },
+        {
+          "location": "21:97:3",
+          "surah": 21,
+          "verse": 97,
+          "word": 3,
+          "text": "ٱلْحَقُّ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮐ",
+            "qpc2": "ﲀ"
+          }
+        },
+        {
+          "location": "21:97:4",
+          "surah": 21,
+          "verse": 97,
+          "word": 4,
+          "text": "فَإِذَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮑ",
+            "qpc2": "ﲁ"
+          }
+        },
+        {
+          "location": "21:97:5",
+          "surah": 21,
+          "verse": 97,
+          "word": 5,
+          "text": "هِىَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮒ",
+            "qpc2": "ﲂ"
+          }
+        },
+        {
+          "location": "21:97:6",
+          "surah": 21,
+          "verse": 97,
+          "word": 6,
+          "text": "شَـٰخِصَةٌ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮓ",
+            "qpc2": "ﲃ"
+          }
+        },
+        {
+          "location": "21:97:7",
+          "surah": 21,
+          "verse": 97,
+          "word": 7,
+          "text": "أَبْصَـٰرُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮔ",
+            "qpc2": "ﲄ"
+          }
+        },
+        {
+          "location": "21:97:8",
+          "surah": 21,
+          "verse": 97,
+          "word": 8,
+          "text": "ٱلَّذِينَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮕ",
+            "qpc2": "ﲅ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 10,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 21,
+          "verse": 97
+        },
+        "end": {
+          "surah": 21,
+          "verse": 97
+        }
+      },
+      "text": "كَفَرُوا۟ يَـٰوَيْلَنَا قَدْ كُنَّا فِى غَفْلَةٍۢ مِّنْ هَـٰذَا بَلْ كُنَّا",
+      "words": [
+        {
+          "location": "21:97:9",
+          "surah": 21,
+          "verse": 97,
+          "word": 9,
+          "text": "كَفَرُوا۟",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮖ",
+            "qpc2": "ﲆ"
+          }
+        },
+        {
+          "location": "21:97:10",
+          "surah": 21,
+          "verse": 97,
+          "word": 10,
+          "text": "يَـٰوَيْلَنَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮗ",
+            "qpc2": "ﲇ"
+          }
+        },
+        {
+          "location": "21:97:11",
+          "surah": 21,
+          "verse": 97,
+          "word": 11,
+          "text": "قَدْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮘ",
+            "qpc2": "ﲈ"
+          }
+        },
+        {
+          "location": "21:97:12",
+          "surah": 21,
+          "verse": 97,
+          "word": 12,
+          "text": "كُنَّا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮙ",
+            "qpc2": "ﲉ"
+          }
+        },
+        {
+          "location": "21:97:13",
+          "surah": 21,
+          "verse": 97,
+          "word": 13,
+          "text": "فِى",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮚ",
+            "qpc2": "ﲊ"
+          }
+        },
+        {
+          "location": "21:97:14",
+          "surah": 21,
+          "verse": 97,
+          "word": 14,
+          "text": "غَفْلَةٍۢ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮛ",
+            "qpc2": "ﲋ"
+          }
+        },
+        {
+          "location": "21:97:15",
+          "surah": 21,
+          "verse": 97,
+          "word": 15,
+          "text": "مِّنْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮜ",
+            "qpc2": "ﲌ"
+          }
+        },
+        {
+          "location": "21:97:16",
+          "surah": 21,
+          "verse": 97,
+          "word": 16,
+          "text": "هَـٰذَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮝ",
+            "qpc2": "ﲍ"
+          }
+        },
+        {
+          "location": "21:97:17",
+          "surah": 21,
+          "verse": 97,
+          "word": 17,
+          "text": "بَلْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮞ",
+            "qpc2": "ﲎ"
+          }
+        },
+        {
+          "location": "21:97:18",
+          "surah": 21,
+          "verse": 97,
+          "word": 18,
+          "text": "كُنَّا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮟ",
+            "qpc2": "ﲏ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 11,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 21,
+          "verse": 97
+        },
+        "end": {
+          "surah": 21,
+          "verse": 98
+        }
+      },
+      "text": "ظَـٰلِمِينَ ٩٧ إِنَّكُمْ وَمَا تَعْبُدُونَ مِن دُونِ",
+      "words": [
+        {
+          "location": "21:97:19",
+          "surah": 21,
+          "verse": 97,
+          "word": 19,
+          "text": "ظَـٰلِمِينَ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﮠ ﮡ",
+            "qpc2": "ﲐ ﲑ"
+          }
+        },
+        {
+          "location": "21:98:1",
+          "surah": 21,
+          "verse": 98,
+          "word": 1,
+          "text": "إِنَّكُمْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮢ",
+            "qpc2": "ﲒ"
+          }
+        },
+        {
+          "location": "21:98:2",
+          "surah": 21,
+          "verse": 98,
+          "word": 2,
+          "text": "وَمَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮣ",
+            "qpc2": "ﲓ"
+          }
+        },
+        {
+          "location": "21:98:3",
+          "surah": 21,
+          "verse": 98,
+          "word": 3,
+          "text": "تَعْبُدُونَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮤ",
+            "qpc2": "ﲔ"
+          }
+        },
+        {
+          "location": "21:98:4",
+          "surah": 21,
+          "verse": 98,
+          "word": 4,
+          "text": "مِن",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮥ",
+            "qpc2": "ﲕ"
+          }
+        },
+        {
+          "location": "21:98:5",
+          "surah": 21,
+          "verse": 98,
+          "word": 5,
+          "text": "دُونِ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮦ",
+            "qpc2": "ﲖ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 12,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 21,
+          "verse": 98
+        },
+        "end": {
+          "surah": 21,
+          "verse": 99
+        }
+      },
+      "text": "ٱللَّهِ حَصَبُ جَهَنَّمَ أَنتُمْ لَهَا وَٰرِدُونَ ٩٨ لَوْ كَانَ",
+      "words": [
+        {
+          "location": "21:98:6",
+          "surah": 21,
+          "verse": 98,
+          "word": 6,
+          "text": "ٱللَّهِ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮧ",
+            "qpc2": "ﲗ"
+          }
+        },
+        {
+          "location": "21:98:7",
+          "surah": 21,
+          "verse": 98,
+          "word": 7,
+          "text": "حَصَبُ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮨ",
+            "qpc2": "ﲘ"
+          }
+        },
+        {
+          "location": "21:98:8",
+          "surah": 21,
+          "verse": 98,
+          "word": 8,
+          "text": "جَهَنَّمَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮩ",
+            "qpc2": "ﲙ"
+          }
+        },
+        {
+          "location": "21:98:9",
+          "surah": 21,
+          "verse": 98,
+          "word": 9,
+          "text": "أَنتُمْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮪ",
+            "qpc2": "ﲚ"
+          }
+        },
+        {
+          "location": "21:98:10",
+          "surah": 21,
+          "verse": 98,
+          "word": 10,
+          "text": "لَهَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮫ",
+            "qpc2": "ﲛ"
+          }
+        },
+        {
+          "location": "21:98:11",
+          "surah": 21,
+          "verse": 98,
+          "word": 11,
+          "text": "وَٰرِدُونَ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﮬ ﮭ",
+            "qpc2": "ﲜ ﲝ"
+          }
+        },
+        {
+          "location": "21:99:1",
+          "surah": 21,
+          "verse": 99,
+          "word": 1,
+          "text": "لَوْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮮ",
+            "qpc2": "ﲞ"
+          }
+        },
+        {
+          "location": "21:99:2",
+          "surah": 21,
+          "verse": 99,
+          "word": 2,
+          "text": "كَانَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮯ",
+            "qpc2": "ﲟ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 13,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 21,
+          "verse": 99
+        },
+        "end": {
+          "surah": 21,
+          "verse": 99
+        }
+      },
+      "text": "هَـٰٓؤُلَآءِ ءَالِهَةًۭ مَّا وَرَدُوهَا ۖ وَكُلٌّۭ فِيهَا خَـٰلِدُونَ ٩٩",
+      "words": [
+        {
+          "location": "21:99:3",
+          "surah": 21,
+          "verse": 99,
+          "word": 3,
+          "text": "هَـٰٓؤُلَآءِ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮰ",
+            "qpc2": "ﲠ"
+          }
+        },
+        {
+          "location": "21:99:4",
+          "surah": 21,
+          "verse": 99,
+          "word": 4,
+          "text": "ءَالِهَةًۭ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﮱ",
+            "qpc2": "ﲡ"
+          }
+        },
+        {
+          "location": "21:99:5",
+          "surah": 21,
+          "verse": 99,
+          "word": 5,
+          "text": "مَّا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯓ",
+            "qpc2": "ﲢ"
+          }
+        },
+        {
+          "location": "21:99:6",
+          "surah": 21,
+          "verse": 99,
+          "word": 6,
+          "text": "وَرَدُوهَا ۖ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯔﯕ",
+            "qpc2": "ﲣﲤ"
+          }
+        },
+        {
+          "location": "21:99:7",
+          "surah": 21,
+          "verse": 99,
+          "word": 7,
+          "text": "وَكُلٌّۭ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯖ",
+            "qpc2": "ﲥ"
+          }
+        },
+        {
+          "location": "21:99:8",
+          "surah": 21,
+          "verse": 99,
+          "word": 8,
+          "text": "فِيهَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯗ",
+            "qpc2": "ﲦ"
+          }
+        },
+        {
+          "location": "21:99:9",
+          "surah": 21,
+          "verse": 99,
+          "word": 9,
+          "text": "خَـٰلِدُونَ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﯘ ﯙ",
+            "qpc2": "ﲧ ﲨ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 14,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 21,
+          "verse": 100
+        },
+        "end": {
+          "surah": 21,
+          "verse": 101
+        }
+      },
+      "text": "لَهُمْ فِيهَا زَفِيرٌۭ وَهُمْ فِيهَا لَا يَسْمَعُونَ ١٠٠ إِنَّ ٱلَّذِينَ",
+      "words": [
+        {
+          "location": "21:100:1",
+          "surah": 21,
+          "verse": 100,
+          "word": 1,
+          "text": "لَهُمْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯚ",
+            "qpc2": "ﲩ"
+          }
+        },
+        {
+          "location": "21:100:2",
+          "surah": 21,
+          "verse": 100,
+          "word": 2,
+          "text": "فِيهَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯛ",
+            "qpc2": "ﲪ"
+          }
+        },
+        {
+          "location": "21:100:3",
+          "surah": 21,
+          "verse": 100,
+          "word": 3,
+          "text": "زَفِيرٌۭ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯜ",
+            "qpc2": "ﲫ"
+          }
+        },
+        {
+          "location": "21:100:4",
+          "surah": 21,
+          "verse": 100,
+          "word": 4,
+          "text": "وَهُمْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯝ",
+            "qpc2": "ﲬ"
+          }
+        },
+        {
+          "location": "21:100:5",
+          "surah": 21,
+          "verse": 100,
+          "word": 5,
+          "text": "فِيهَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯞ",
+            "qpc2": "ﲭ"
+          }
+        },
+        {
+          "location": "21:100:6",
+          "surah": 21,
+          "verse": 100,
+          "word": 6,
+          "text": "لَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯟ",
+            "qpc2": "ﲮ"
+          }
+        },
+        {
+          "location": "21:100:7",
+          "surah": 21,
+          "verse": 100,
+          "word": 7,
+          "text": "يَسْمَعُونَ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﯠ ﯡ",
+            "qpc2": "ﲯ ﲰ"
+          }
+        },
+        {
+          "location": "21:101:1",
+          "surah": 21,
+          "verse": 101,
+          "word": 1,
+          "text": "إِنَّ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯢ",
+            "qpc2": "ﲱ"
+          }
+        },
+        {
+          "location": "21:101:2",
+          "surah": 21,
+          "verse": 101,
+          "word": 2,
+          "text": "ٱلَّذِينَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯣ",
+            "qpc2": "ﲲ"
+          }
+        }
+      ]
+    },
+    {
+      "line": 15,
+      "type": "text",
+      "verseRange": {
+        "start": {
+          "surah": 21,
+          "verse": 101
+        },
+        "end": {
+          "surah": 21,
+          "verse": 101
+        }
+      },
+      "text": "سَبَقَتْ لَهُم مِّنَّا ٱلْحُسْنَىٰٓ أُو۟لَـٰٓئِكَ عَنْهَا مُبْعَدُونَ ١٠١",
+      "words": [
+        {
+          "location": "21:101:3",
+          "surah": 21,
+          "verse": 101,
+          "word": 3,
+          "text": "سَبَقَتْ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯤ",
+            "qpc2": "ﲳ"
+          }
+        },
+        {
+          "location": "21:101:4",
+          "surah": 21,
+          "verse": 101,
+          "word": 4,
+          "text": "لَهُم",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯥ",
+            "qpc2": "ﲴ"
+          }
+        },
+        {
+          "location": "21:101:5",
+          "surah": 21,
+          "verse": 101,
+          "word": 5,
+          "text": "مِّنَّا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯦ",
+            "qpc2": "ﲵ"
+          }
+        },
+        {
+          "location": "21:101:6",
+          "surah": 21,
+          "verse": 101,
+          "word": 6,
+          "text": "ٱلْحُسْنَىٰٓ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯧ",
+            "qpc2": "ﲶ"
+          }
+        },
+        {
+          "location": "21:101:7",
+          "surah": 21,
+          "verse": 101,
+          "word": 7,
+          "text": "أُو۟لَـٰٓئِكَ",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯨ",
+            "qpc2": "ﲷ"
+          }
+        },
+        {
+          "location": "21:101:8",
+          "surah": 21,
+          "verse": 101,
+          "word": 8,
+          "text": "عَنْهَا",
+          "endOfVerse": false,
+          "glyphs": {
+            "qpc1": "ﯩ",
+            "qpc2": "ﲸ"
+          }
+        },
+        {
+          "location": "21:101:9",
+          "surah": 21,
+          "verse": 101,
+          "word": 9,
+          "text": "مُبْعَدُونَ",
+          "endOfVerse": true,
+          "glyphs": {
+            "qpc1": "ﯪ ﯫ",
+            "qpc2": "ﲹ ﲺ"
+          }
+        }
+      ]
+    }
+  ]
+}

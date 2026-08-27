@@ -6,7 +6,11 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "test": "node --experimental-test-module-mocks --test --test-concurrency=4 'test/*.test.js'"
+    "test": "node --experimental-test-module-mocks --test --test-concurrency=4 'test/*.test.js'",
+    "layout:import": "node scripts/import-mushaf-layout.js",
+    "layout:normalize": "node scripts/normalize-mushaf-layout.js",
+    "layout:validate": "node scripts/validate-mushaf-layout.js",
+    "layout:all": "npm run layout:import && npm run layout:normalize && npm run layout:validate"
   },
   "keywords": [
     "islamic",

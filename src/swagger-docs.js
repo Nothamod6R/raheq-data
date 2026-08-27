@@ -256,6 +256,56 @@ export const components = {
       }
     },
     required: ['number', 'name', 'englishName', 'englishNameTranslation', 'numberOfAyahs', 'revelationType']
+  },
+  QuranLayoutWord: {
+    type: 'object',
+    description: 'A single word in a Mushaf text line, keyed to the existing Quran data by location (surah:verse:word).',
+    properties: {
+      location: { type: 'string', description: 'Semantic reference `surah:verse:wordIndex` (1-based), matching the Quran layout dataset.' },
+      surah: { type: 'integer', description: 'Surah number (1-114).' },
+      verse: { type: 'integer', description: 'Verse number within the surah.' },
+      word: { type: 'integer', description: 'Word index within the verse (1-based).' },
+      text: { type: 'string', description: 'Arabic token of the word.' },
+      endOfVerse: { type: 'boolean', description: 'True if this is the last word of its verse.' },
+      glyphs: {
+        type: 'object',
+        description: 'Upstream QPC glyph strings (layout dataset). Kept separate from the authoritative `qcfData` in /api/quran/text/glyphs.',
+        properties: {
+          qpc1: { type: 'string', description: 'QPC v1 glyph string for this word.' },
+          qpc2: { type: 'string', description: 'QPC v2 glyph string for this word.' }
+        }
+      }
+    },
+    required: ['location', 'surah', 'verse', 'word', 'text', 'endOfVerse', 'glyphs']
+  },
+  QuranLayoutLine: {
+    type: 'object',
+    description: 'A single Mushaf line within a page.',
+    properties: {
+      line: { type: 'integer', description: 'Line number within the page (1-based).' },
+      type: { type: 'string', description: 'Line kind.', enum: ['surah-header', 'basmala', 'text'] },
+      surah: { type: 'integer', description: 'Surah number for `surah-header` lines.' },
+      text: { type: 'string', description: 'Arabic text for `surah-header` and `text` lines.' },
+      verseRange: {
+        type: 'object',
+        description: 'First and last verse covered by the line (text lines).',
+        properties: {
+          start: { type: 'object', properties: { surah: { type: 'integer' }, verse: { type: 'integer' } } },
+          end: { type: 'object', properties: { surah: { type: 'integer' }, verse: { type: 'integer' } } }
+        }
+      },
+      words: { type: 'array', description: 'Ordered words for `text` lines.', items: { $ref: '#/components/schemas/QuranLayoutWord' } }
+    },
+    required: ['line', 'type']
+  },
+  QuranLayoutPage: {
+    type: 'object',
+    description: 'A normalized Mushaf page exposing page -> line -> word.',
+    properties: {
+      page: { type: 'integer', description: 'Page number (1-604).' },
+      lines: { type: 'array', description: 'Ordered Mushaf lines.', items: { $ref: '#/components/schemas/QuranLayoutLine' } }
+    },
+    required: ['page', 'lines']
   }
 };
 export const responseSchemas = {
@@ -820,6 +870,28 @@ const operations = {
         200: json({ type: 'array', items: { $ref: '#/components/schemas/Surah' } }, [
           { number: 1, name: 'ٱلْفَاتِحَةِ', englishName: 'Al-Faatiha', englishNameTranslation: 'The Opening', numberOfAyahs: 7, revelationType: 'Meccan' }
         ])
+      }
+    }
+  },
+  '/api/quran/layout/page/:page': {
+    get: {
+      tags: ['Quran'],
+      summary: 'Get the Mushaf layout of a single page',
+      description:
+        'Returns the normalized Mushaf layout for one page (page -> line -> word). ' +
+        'Each word carries a `location` (`surah:verse:wordIndex`) linking it to the existing Quran data ' +
+        'served by /api/quran/text/*, plus the upstream QPC glyphs. No frontend line-break guessing required.',
+      parameters: [
+        pathParam('page', { type: 'integer', minimum: 1, maximum: 604 }, 'Page number (1-604).')
+      ],
+      responses: {
+        200: json({ $ref: '#/components/schemas/QuranLayoutPage' }, {
+          page: 3,
+          lines: [
+            { line: 1, type: 'text', text: '...', verseRange: { start: { surah: 2, verse: 6 }, end: { surah: 2, verse: 6 } }, words: [{ location: '2:6:1', surah: 2, verse: 6, word: 1, text: 'إِنَّ', endOfVerse: false, glyphs: { qpc1: 'ﭑ', qpc2: 'ﱁ' } }] }
+          ]
+        }),
+        404: jsonErr({ $ref: '#/components/schemas/Error' }, { error: 'Not Found', message: 'Invalid page. Must be an integer between 1 and 604.' }, 'Invalid or missing page.')
       }
     }
   }
