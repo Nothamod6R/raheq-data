@@ -259,24 +259,22 @@ export const components = {
   },
   QuranLayoutWord: {
     type: 'object',
-    description: 'A single word in a Mushaf text line, keyed to the existing Quran data by location (surah:verse:word).',
+    description: 'A single word in a Mushaf text line, keyed to the existing Quran data by location (surah:verse:wordIndex).',
     properties: {
       location: { type: 'string', description: 'Semantic reference `surah:verse:wordIndex` (1-based), matching the Quran layout dataset.' },
       surah: { type: 'integer', description: 'Surah number (1-114).' },
       verse: { type: 'integer', description: 'Verse number within the surah.' },
       word: { type: 'integer', description: 'Word index within the verse (1-based).' },
-      text: { type: 'string', description: 'Arabic token of the word.' },
-      endOfVerse: { type: 'boolean', description: 'True if this is the last word of its verse.' },
-      glyphs: {
-        type: 'object',
-        description: 'Upstream QPC glyph strings (layout dataset). Kept separate from the authoritative `qcfData` in /api/quran/text/glyphs.',
-        properties: {
-          qpc1: { type: 'string', description: 'QPC v1 glyph string for this word.' },
-          qpc2: { type: 'string', description: 'QPC v2 glyph string for this word.' }
-        }
-      }
+      position: { type: 'integer', description: 'Word position within the line (1-based).' },
+      glyph: { type: 'string', description: 'QCF V2 glyph code (code_v2) for the word proper.' },
+      kind: { type: 'string', description: 'Cell kind.', enum: ['word', 'verse-marker'] },
+      endOfVerse: { type: 'boolean', description: 'True if this cell ends a verse (carries the ayah-end marker).' },
+      marker: { type: ['string', 'null'], description: 'Ayah-end marker glyph when present, else null.' },
+      page: { type: 'integer', description: 'Page number.' },
+      line: { type: 'integer', description: 'Line number within the page.' },
+      geometry: { type: ['object', 'null'], nullable: true, description: 'Per-word pixel geometry (x/y/width/height). Always null — the QUL layout database provides no geometry; see the layout README.' }
     },
-    required: ['location', 'surah', 'verse', 'word', 'text', 'endOfVerse', 'glyphs']
+    required: ['location', 'surah', 'verse', 'word', 'position', 'glyph', 'kind', 'endOfVerse', 'marker', 'page', 'line', 'geometry']
   },
   QuranLayoutLine: {
     type: 'object',
@@ -284,28 +282,21 @@ export const components = {
     properties: {
       line: { type: 'integer', description: 'Line number within the page (1-based).' },
       type: { type: 'string', description: 'Line kind.', enum: ['surah-header', 'basmala', 'text'] },
-      surah: { type: 'integer', description: 'Surah number for `surah-header` lines.' },
-      text: { type: 'string', description: 'Arabic text for `surah-header` and `text` lines.' },
-      verseRange: {
-        type: 'object',
-        description: 'First and last verse covered by the line (text lines).',
-        properties: {
-          start: { type: 'object', properties: { surah: { type: 'integer' }, verse: { type: 'integer' } } },
-          end: { type: 'object', properties: { surah: { type: 'integer' }, verse: { type: 'integer' } } }
-        }
-      },
+      surah: { type: ['integer', 'null'], description: 'Surah number for `surah-header` / `basmala` lines, else null.' },
+      surahName: { type: ['string', 'null'], description: 'Arabic surah name for `surah-header` lines, else null.' },
       words: { type: 'array', description: 'Ordered words for `text` lines.', items: { $ref: '#/components/schemas/QuranLayoutWord' } }
     },
-    required: ['line', 'type']
+    required: ['line', 'type', 'surah', 'words']
   },
   QuranLayoutPage: {
     type: 'object',
     description: 'A normalized Mushaf page exposing page -> line -> word.',
     properties: {
       page: { type: 'integer', description: 'Page number (1-604).' },
+      linesPerPage: { type: 'integer', description: 'Nominal lines per page for this Mushaf (15).' },
       lines: { type: 'array', description: 'Ordered Mushaf lines.', items: { $ref: '#/components/schemas/QuranLayoutLine' } }
     },
-    required: ['page', 'lines']
+    required: ['page', 'linesPerPage', 'lines']
   }
 };
 export const responseSchemas = {
@@ -887,8 +878,16 @@ const operations = {
       responses: {
         200: json({ $ref: '#/components/schemas/QuranLayoutPage' }, {
           page: 3,
+          linesPerPage: 15,
           lines: [
-            { line: 1, type: 'text', text: '...', verseRange: { start: { surah: 2, verse: 6 }, end: { surah: 2, verse: 6 } }, words: [{ location: '2:6:1', surah: 2, verse: 6, word: 1, text: 'إِنَّ', endOfVerse: false, glyphs: { qpc1: 'ﭑ', qpc2: 'ﱁ' } }] }
+            {
+              line: 1,
+              type: 'text',
+              surah: null,
+              words: [
+                { location: '2:6:1', surah: 2, verse: 6, word: 1, position: 1, glyph: 'ﱁ', kind: 'word', endOfVerse: false, marker: null, page: 3, line: 1, geometry: null }
+              ]
+            }
           ]
         }),
         404: jsonErr({ $ref: '#/components/schemas/Error' }, { error: 'Not Found', message: 'Invalid page. Must be an integer between 1 and 604.' }, 'Invalid or missing page.')

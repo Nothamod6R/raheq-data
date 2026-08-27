@@ -454,52 +454,75 @@ curl "http://localhost:3000/api/quran/metadata/surahs?number=2"
 
 ---
 
-<<<<<<< HEAD
-## طرق حساب أوقات الصلاة (Calculation Methods)
-=======
 ### (و) تخطيط المصحف (Mushaf Layout)
 
 - **GET** `/api/quran/layout/page/:page`
 - Path parameter:
   - `page` (مطلوب): رقم الصفحة من 1 إلى 604.
 
-يعيد هذا الـ Endpoint **تخطيط صفحة المصحف الكاملة** بصيغة **صفحة ← سطر ← كلمة**
-دون الحاجة لتخمين فواصل الأسطر من جهة الواجهة. البيانات مصدرها
-`database/quran/text/layout/normalized/` (مجموعة `zonetecde/mushaf-layout`
-المستوردة بتثبيت commit رقم `72116ce4` — انظر `database/quran/text/layout/README.md`).
+يعيد هذا الـ Endpoint **تخطيط صفحة المصحف الكاملة** بصيغة **صفحة ← سطر ← كلمة** دون الحاجة
+لتخمين فواصل الأسطر من جهة الواجهة. البيانات مصدرها:
 
-تتكون الاستجابة من كائن بصيغة:
+```text
+database/quran/text/layout/normalized/page-NNN.json   (صفحة ← سطر ← كلمة)
+database/quran/text/layout/source/quran-layout-v2.db  (قاعدة البيانات المصدرية الأصلية — QUL QCF V2)
+```
+
+هذه هي الطبعة **QCF V2** من مصحف المدينة (1423هـ) من **Quranic Universal Library (QUL)** عبر
+مشروع `NedaaDevs/quran-image-generator` (المثبّتة من إصدار GitHub `assets`، انظر
+`database/quran/text/layout/source/layout-metadata.json` و`README.md` في نفس المجلد).
+
+يتكوّن كل سطر من:
+
+| الحقل | الوصف |
+|------|------|
+| `line` | رقم السطر (1–15) |
+| `type` | `surah-header` (رأس سورة)، `basmala`، أو `text` |
+| `surah` | رقم السورة (لسطور الرأس/البسملة) |
+| `surahName` | اسم السورة بالعربية (لسطور الرأس فقط) |
+| `words` | مصفوفة الكلمات (لسطور النص فقط) |
+
+كل كلمة تحمل:
 
 ```json
 {
+  "location": "2:6:3",
+  "surah": 2,
+  "verse": 6,
+  "word": 3,
+  "position": 3,
+  "glyph": "ﱃ",
+  "kind": "word",
+  "endOfVerse": false,
+  "marker": null,
   "page": 3,
-  "lines": [
-    { "line": 1, "type": "text", "verseRange": { "start": { "surah": 2, "verse": 6 }, "end": { "surah": 2, "verse": 6 } },
-      "words": [
-        { "location": "2:6:1", "surah": 2, "verse": 6, "word": 1, "text": "إِنَّ",
-          "endOfVerse": false, "glyphs": { "qpc1": "ﭑ", "qpc2": "ﱁ" } }
-      ] }
-  ]
+  "line": 1,
+  "geometry": null
 }
 ```
 
-- كل سطر له `type`: `surah-header` (رأس سورة)، `basmala`، أو `text`.
-- كل كلمة تحمل `location` بصيغة `surah:verse:wordIndex` لربطها ببيانات القرآن
-  الموجودة بالفعل (`surah:verse` → `/api/quran/text/...`) دون الحاجة إلى فهرس
-  مصفوفة غير مستقر.
-- رموز QPC تأتي من المصدر، وهي **منفصلة** عن `qcfData` (المرجع في
-  `database/quran/text/quran.json`). القطع/التوافق موضّح في ملف README الخاص
-  بالمجموعة.
+- `location` بصيغة `surah:verse:wordIndex` تربط الكلمة ببيانات القرآن الموجودة
+  (`database/quran/text/quran.json`) لاسترجاع نصّها.
+- `glyph` هو رمز **QCF V2** (رمز `code_v2` المقابل للكلمة في خط الصفحة).
+- `endOfVerse`/`marker`: إذا كانت الكلمة تنهي آية، يظهر رمز علامة نهاية الآية في `marker`.
+- `kind`: `word` أو `verse-marker` (علامة نهاية آية سقطت إلى بداية السطر التالي).
+- `geometry`: دائمًا `null` — قاعدة بيانات QUL لا تحتوي هندسة بكسلات لكل كلمة
+  (x/y/width/height تنتج وقت الرسم في ملف `bounds.db` منفصل وليست جزءًا من بيانات QUL).
+  لذلك لم تُختلَق قيم وهمية؛ النص العربي يُستخرج عبر `location` من `quran.json`.
 
-مثال:
+لمثال حي:
 ```bash
-curl "http://localhost:3000/api/quran/layout/page/1"
+curl "http://localhost:3000/api/quran/layout/page/3"
+```
+
+ملاحظة إعادة الإنتاج: الملفات في `scripts/` تعيد إنشاء هذه البيانات من المصدر المثبّت:
+```bash
+npm run layout:all   # import (من الإصدار المثبّت) ← normalize ← validate
 ```
 
 ---
 
-## 8) أوقات الصلاة (Prayer Times)
->>>>>>> 0dfcd93 (Add quran QCF page layout from (https://github.com/zonetecde/mushaf-layout) repo)
+## طرق حساب أوقات الصلاة (Calculation Methods)
 
 | الطريقة                   | Fajr | Isha |
 |---------------------------|------|------|
